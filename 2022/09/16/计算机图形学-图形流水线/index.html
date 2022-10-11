@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机图形学-图形流水线 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="图形流水线 3D geometry ：致顶点构成的3D几何体的相对位置关系描述 3D material ： 表示对应的几何面的材质 lights： 光的颜色 能量 光源的形状。 camera ： 摄像机的设定  一个简单的图形流水线步骤示意图 应用请求提出在CPU 而之后的摄像机运算与光栅化都在GPU上 首先CPU按照需求将环境中图形篇有层次进行分割 然后转到GPU GPU首先把元素按照三维空间的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机图形学-图形流水线">
+<meta property="og:url" content="http://example.com/2022/09/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%9B%BE%E5%BD%A2%E6%B5%81%E6%B0%B4%E7%BA%BF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="图形流水线 3D geometry ：致顶点构成的3D几何体的相对位置关系描述 3D material ： 表示对应的几何面的材质 lights： 光的颜色 能量 光源的形状。 camera ： 摄像机的设定  一个简单的图形流水线步骤示意图 应用请求提出在CPU 而之后的摄像机运算与光栅化都在GPU上 首先CPU按照需求将环境中图形篇有层次进行分割 然后转到GPU GPU首先把元素按照三维空间的">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916101114456.png">
+<meta property="og:image" content="c:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916103502845.png">
+<meta property="og:image" content="c:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916103738677.png">
+<meta property="og:image" content="c:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916112344827.png">
+<meta property="og:image" content="c:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916112453569.png">
+<meta property="article:published_time" content="2022-09-16T02:02:00.000Z">
+<meta property="article:modified_time" content="2022-09-16T04:21:20.242Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916101114456.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机图形学-图形流水线" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%9B%BE%E5%BD%A2%E6%B5%81%E6%B0%B4%E7%BA%BF/" class="article-date">
+  <time class="dt-published" datetime="2022-09-16T02:02:00.000Z" itemprop="datePublished">2022-09-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机图形学-图形流水线
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>图形流水线</p>
+<p>3D geometry ：致顶点构成的3D几何体的相对位置关系描述</p>
+<p>3D material ： 表示对应的几何面的材质</p>
+<p>lights： 光的颜色 能量 光源的形状。</p>
+<p>camera ： 摄像机的设定</p>
+<p><img src="C:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916101114456.png" alt="image-20220916101114456"></p>
+<p>一个简单的图形流水线步骤示意图</p>
+<p>应用请求提出在CPU 而之后的摄像机运算与光栅化都在GPU上</p>
+<p>首先CPU按照需求将环境中图形篇有层次进行分割</p>
+<p>然后转到GPU GPU首先把元素按照三维空间的正确位置进行摆放之后进行按材质打光</p>
+<p>特点：</p>
+<ul>
+<li>I&#x2F;O规模较大</li>
+</ul>
+<p>application：</p>
+<p>将需求解构为构成图形的基本3D元素 点 线 环 面 </p>
+<ul>
+<li>根据线的环向用右手定则确定正面</li>
+</ul>
+<p>openGL （CPU与GPU通信接口）</p>
+<ul>
+<li>提供了10种初始形状。</li>
+</ul>
+<p>顶点：</p>
+<ul>
+<li><p>包含最基本的位置信息（xyz）</p>
+</li>
+<li><p>包含颜色（RGB设定）有的还添加了透明度</p>
+</li>
+<li><p>顶点的法向量 （表示点附近所形成表面的法向量方向 主要用于曲面）在进行光照计算时候同样注意</p>
+</li>
+<li><p>纹理（texture）：某一表面图案与每个顶点的二维平面关系</p>
+</li>
+</ul>
+<p>光栅化：</p>
+<ul>
+<li>图像是由像素构成的 而在三维空间上的连续表达要转化成图像需要进行光栅化的扫描转换。</li>
+<li>在这个过程中要注意像素点的颜色变化</li>
+<li>pixel（像素） fragment（并非在屏幕上而是原始数据转换时产生的原始像素分割 实际上要更为丰富）</li>
+</ul>
+<p>3D图像的流水线：</p>
+<p><img src="C:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916103502845.png" alt="image-20220916103502845"></p>
+<p>除了第一阶段外均在GPU中进行。</p>
+<p>传统GPU架构：</p>
+<ul>
+<li>vertex processer（顶点处理器） 固定定点在坐A标系中位置</li>
+<li>rasterizer 光栅化</li>
+<li>fragment processer 透明度 着色等</li>
+<li>输出</li>
+<li><img src="C:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916103738677.png" alt="image-20220916103738677"></li>
+</ul>
+<p>coordinate system（用右手定则进行建系）</p>
+<ul>
+<li>世界坐标系</li>
+<li>观察坐标系</li>
+<li>object 坐标系</li>
+</ul>
+<p>model transform</p>
+<p>将每个物体组件的相对位置关系转换为整体使用的世界坐标系</p>
+<p>投影画面是很大的，但是窗口画面只有固定部分</p>
+<p>之后会考虑到观察角度进一步转化为观察者坐标系。</p>
+<p>可见性（出现于光栅化部分）：</p>
+<ul>
+<li><p>早期：画家算法</p>
+<ul>
+<li>由远及近 有后往前进行渲染</li>
+<li>在对远处物体进行渲染后立即对近处物体进行重新渲染</li>
+<li>对于互相拥有前后关系的物体无法实现正常渲染</li>
+</ul>
+</li>
+<li><p>Z-buffer</p>
+<ul>
+<li><p>将整体画面进行分块 观察局部画面是否满足画家算法</p>
+</li>
+<li><p>但是无法完全解决问题</p>
+</li>
+<li><p>将问题下放至每一个像素的问题（目前基本使用方法）</p>
+</li>
+<li><p>对每个像素的远近关系进行实现</p>
+</li>
+<li><p>根据观察者视点来确定每一个像素点的Z值</p>
+</li>
+<li><p>同一观察线上选取Z值最小值像素点进行更新（光栅化环节进行完成）</p>
+</li>
+<li><p>尽管涉及到每一个像素点，但是全部是浮点运算（不存在不可并行部分）</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>线性代数复习</p>
+<p><img src="C:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916112344827.png" alt="image-20220916112344827"></p>
+<p><img src="C:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20220916112453569.png" alt="image-20220916112453569"></p>
+<p>tomoyuki nishita 渲染方面的大师</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%9B%BE%E5%BD%A2%E6%B5%81%E6%B0%B4%E7%BA%BF/" data-id="cl93g2ih0000d18ulfhwu0adg" data-title="计算机图形学-图形流水线" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/09/16/%E6%89%93%E5%AD%97%E7%BB%83%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          打字练习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/09/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%AE%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">计算机网络概论</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/10/11/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20CSP/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/08/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8ENLP/">神经网络与NLP</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/07/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-Project-1/">人工智能 Project 1</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/29/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2/">人工智能 启发式搜索</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
