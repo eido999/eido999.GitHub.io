@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机图形学 复习 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算机图形学（复习）pepline由3D模型转换为3D场景，3D几何学表示顶点构成的几何物体 metiral：产生图形表面的材质（有多少打在表面上的光可以进行反射） 光源：用于定义光的产生，颜色等。 camera：摄像机。  模型 世界架构 光栅化。 application：将场景中复杂物体拆解为面片。 camera、transform：将模型在空间中进行正确计算。 光栅化 ： 打光 在连续空间中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机图形学 复习">
+<meta property="og:url" content="http://example.com/2022/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机图形学（复习）pepline由3D模型转换为3D场景，3D几何学表示顶点构成的几何物体 metiral：产生图形表面的材质（有多少打在表面上的光可以进行反射） 光源：用于定义光的产生，颜色等。 camera：摄像机。  模型 世界架构 光栅化。 application：将场景中复杂物体拆解为面片。 camera、transform：将模型在空间中进行正确计算。 光栅化 ： 打光 在连续空间中">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022084612651.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022090529605.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022092146290.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022092908772.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022101327624.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022101730877.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022102009454.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022102830743.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022103439512.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022105130152.png">
+<meta property="article:published_time" content="2022-10-22T00:46:55.000Z">
+<meta property="article:modified_time" content="2022-10-22T02:56:08.937Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/posts/image-20221022084612651.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机图形学-复习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%A4%8D%E4%B9%A0/" class="article-date">
+  <time class="dt-published" datetime="2022-10-22T00:46:55.000Z" itemprop="datePublished">2022-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机图形学 复习
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="计算机图形学（复习）"><a href="#计算机图形学（复习）" class="headerlink" title="计算机图形学（复习）"></a>计算机图形学（复习）</h1><h2 id="pepline"><a href="#pepline" class="headerlink" title="pepline"></a>pepline</h2><p>由3D模型转换为3D场景，3D几何学表示顶点构成的几何物体</p>
+<p>metiral：产生图形表面的材质（有多少打在表面上的光可以进行反射）</p>
+<p>光源：用于定义光的产生，颜色等。</p>
+<p>camera：摄像机。</p>
+<p><img src="/../images/posts/image-20221022084612651.png" alt="image-20221022084612651"></p>
+<p>模型 世界架构 光栅化。</p>
+<p><strong>application</strong>：将场景中复杂物体拆解为面片。</p>
+<p>camera、<strong>transform</strong>：将模型在空间中进行正确计算。</p>
+<p>光栅化 ： 打光 在连续空间中显现。？？？</p>
+<p>整体的数据交换规模较大。</p>
+<h3 id="primitives"><a href="#primitives" class="headerlink" title="primitives"></a>primitives</h3><p>用于构成空间基本元素的点线面。</p>
+<p>面跟点线构成的环不同，内部有这个法向量云填充。</p>
+<p>OpenGL：CPU GPU接口定义。</p>
+<h3 id="Vertices（法向量）"><a href="#Vertices（法向量）" class="headerlink" title="Vertices（法向量）"></a>Vertices（法向量）</h3><p>整个面，或者说是某个顶点，表明此个体附近表面的法向量方向。决定正面跟里面。</p>
+<h3 id="pixel-pragment-像素化"><a href="#pixel-pragment-像素化" class="headerlink" title="pixel pragment(像素化)"></a>pixel pragment(像素化)</h3><p>连续空间转换为点阵空间的表达就是像素化。</p>
+<h3 id="rendering-pepline"><a href="#rendering-pepline" class="headerlink" title="rendering pepline"></a>rendering pepline</h3><h3 id=""><a href="#" class="headerlink" title=""></a><img src="/../images/posts/image-20221022090529605.png" alt="image-20221022090529605"></h3><h3 id="vertix-processing（顶点处理）流水线操作"><a href="#vertix-processing（顶点处理）流水线操作" class="headerlink" title="vertix processing（顶点处理）流水线操作"></a>vertix processing（顶点处理）流水线操作</h3><p>进入：</p>
+<ul>
+<li>顶点变换、判断法向量方向。</li>
+</ul>
+<h4 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h4><ul>
+<li>顶点坐标系</li>
+<li>世界坐标系</li>
+<li>观察坐标系。</li>
+</ul>
+<p>object：物体建立时，会以其自身建立一个坐标系。</p>
+<p>model Transform</p>
+<p>归一到世界坐标系。</p>
+<p>view transform</p>
+<p>观察坐标系：摄像机视角的坐标系。</p>
+<p>根据视点对模型进行投影决定展示方向。</p>
+<h2 id="Visiblity（可见性）"><a href="#Visiblity（可见性）" class="headerlink" title="Visiblity（可见性）"></a>Visiblity（可见性）</h2><p>决定模型在投影时留下的部分。</p>
+<h3 id="画家算法：由远及近渲染逐步遮盖"><a href="#画家算法：由远及近渲染逐步遮盖" class="headerlink" title="画家算法：由远及近渲染逐步遮盖"></a>画家算法：由远及近渲染逐步遮盖</h3><p>问题：</p>
+<ul>
+<li>物体之间远近关系不明时无法进行绘制。<ul>
+<li>可以进行无限细分- 》z-buffer</li>
+</ul>
+</li>
+</ul>
+<h3 id="Z-buffer"><a href="#Z-buffer" class="headerlink" title="Z-buffer"></a>Z-buffer</h3><p>为了实现存储位置关系维每个像素设置一个缓存，记录其到眼睛位置。</p>
+<p><img src="/../images/posts/image-20221022092146290.png" alt="image-20221022092146290"></p>
+<p>对于每个三角形，对于其中所有的像素点，这个像素点对于屏幕空间上视点到眼睛 的距离，若比当前点会更近，就改为此点。基本O（1）。</p>
+<h3 id="向量vector"><a href="#向量vector" class="headerlink" title="向量vector"></a>向量vector</h3><p>基本上可以借鉴数学中的内容，有方向的线段，可合成、</p>
+<h3 id="矩阵martix"><a href="#矩阵martix" class="headerlink" title="矩阵martix"></a>矩阵martix</h3><p><img src="/../images/posts/image-20221022092908772.png" alt="image-20221022092908772"></p>
+<h2 id="第二周：Transformaition"><a href="#第二周：Transformaition" class="headerlink" title="第二周：Transformaition"></a>第二周：Transformaition</h2><p>比较偏向数学转换。</p>
+<h3 id="基本变换"><a href="#基本变换" class="headerlink" title="基本变换"></a>基本变换</h3><ul>
+<li>旋转rotate</li>
+<li>放缩scale</li>
+<li>平移translate</li>
+</ul>
+<p>包括modeling跟viewing两部分当中的此类动作。</p>
+<p>用矩阵跟坐标进行实现。</p>
+<h4 id="2D"><a href="#2D" class="headerlink" title="2D"></a>2D</h4><ul>
+<li>scale：矩阵乘以倍数。倍数可以为负数。</li>
+<li>倍数相称不同造成错切变化</li>
+<li>rotate旋转变换。用<img src="/../images/posts/image-20221022101327624.png" alt="image-20221022101327624"></li>
+<li>这一矩阵表示乘法。</li>
+<li>平移就是简单加减。</li>
+<li>其次做、表引入后就会变成计算结构</li>
+<li><img src="/../images/posts/image-20221022101730877.png" alt="image-20221022101730877"></li>
+</ul>
+<h4 id="齐次坐标系"><a href="#齐次坐标系" class="headerlink" title="齐次坐标系"></a>齐次坐标系</h4><ul>
+<li>齐次加减均为适量，对于2D来说齐次为三个纬度。</li>
+<li><img src="/../images/posts/image-20221022102009454.png" alt="image-20221022102009454"></li>
+<li>矩阵都是在顶点的左边相乘。</li>
+</ul>
+<h4 id="3D"><a href="#3D" class="headerlink" title="3D"></a>3D</h4><p>同理，其次坐标为4*4矩阵。</p>
+<ul>
+<li><p>旋转，安旋转轴有所不同，使用欧拉角进行表示。</p>
+<p><img src="/../images/posts/image-20221022102830743.png" alt="image-20221022102830743"></p>
+<p><img src="/../images/posts/image-20221022103439512.png" alt="image-20221022103439512"></p>
+</li>
+</ul>
+<h3 id="视点坐标系"><a href="#视点坐标系" class="headerlink" title="视点坐标系"></a>视点坐标系</h3><p>也称为摄像机坐标系。</p>
+<p>在眼前的东西的深度值实际上为负数值。</p>
+<p>在转换的过程中只需要加上一个modelview矩阵。</p>
+<h3 id="透视投影"><a href="#透视投影" class="headerlink" title="透视投影"></a>透视投影</h3><h4 id="平行投影"><a href="#平行投影" class="headerlink" title="平行投影"></a>平行投影</h4><p>正投影是平行投影的特殊情况。</p>
+<h4 id="透视投影-1"><a href="#透视投影-1" class="headerlink" title="透视投影"></a>透视投影</h4><p>将所有物件汇聚的一点进行投影，（从一个点看过去）</p>
+<p>平行线不再平行。</p>
+<p>fovy（Y方向视角）</p>
+<p>注意透视投影的计算方式</p>
+<p><img src="/../images/posts/image-20221022105130152.png" alt="image-20221022105130152"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%A4%8D%E4%B9%A0/" data-id="cl9jbxese0000nsul2pqqcesc" data-title="计算机图形学 复习" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%AC%AC%E4%BA%94%E5%91%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">计算机图形学 第五周</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%A4%8D%E4%B9%A0/">计算机图形学 复习</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%AC%AC%E4%BA%94%E5%91%A8/">计算机图形学 第五周</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/">计算机网络 不知道</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/11/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/">信息抽取</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/11/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20CSP/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
