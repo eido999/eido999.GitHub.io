@@ -23,8 +23,13 @@
 <meta property="og:image" content="http://example.com/images/posts/image-20221022102830743.png">
 <meta property="og:image" content="http://example.com/images/posts/image-20221022103439512.png">
 <meta property="og:image" content="http://example.com/images/posts/image-20221022105130152.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022182057217.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022182409999.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022184817686.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022185037666.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221022201426473.png">
 <meta property="article:published_time" content="2022-10-22T00:46:55.000Z">
-<meta property="article:modified_time" content="2022-10-22T02:56:08.937Z">
+<meta property="article:modified_time" content="2022-10-22T12:35:51.166Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/posts/image-20221022084612651.png">
@@ -187,6 +192,60 @@
 <p>fovy（Y方向视角）</p>
 <p>注意透视投影的计算方式</p>
 <p><img src="/../images/posts/image-20221022105130152.png" alt="image-20221022105130152"></p>
+<p><img src="/../images/posts/image-20221022182057217.png" alt="image-20221022182057217"></p>
+<h4 id="screen"><a href="#screen" class="headerlink" title="screen"></a>screen</h4><p>表示最终呈现的图案。多个像素构成的空间。一般用平面坐标系构成。对于每个像素可以用中心，也可统一使用左下角。</p>
+<p><img src="/../images/posts/image-20221022182409999.png" alt="image-20221022182409999"></p>
+<h2 id="Rasterization（光栅化）"><a href="#Rasterization（光栅化）" class="headerlink" title="Rasterization（光栅化）"></a>Rasterization（光栅化）</h2><p>在顶点完成投影后整个团实际上仍旧是一个连续的图形，因此只有进行光栅化后在能变成像素表示。</p>
+<h3 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h3><p>用于防止整个图形发生走样。一般采用三角形进行一个球体的构成。</p>
+<p>原因：</p>
+<ul>
+<li>三点确定并稳定一个平面。</li>
+<li>简单好做。</li>
+</ul>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>采样，</p>
+<h4 id="采样"><a href="#采样" class="headerlink" title="采样"></a>采样</h4><p>采样（决定构成面所使用的离散点）$\rightarrow $（找出像素中心点是否在三角形内部）评估</p>
+<p>可以绕这边走一圈判断法向量叉乘。算法复杂度为O(nm)(整个方形面积中的点的个数)</p>
+<h4 id="扫描转换算法"><a href="#扫描转换算法" class="headerlink" title="扫描转换算法"></a>扫描转换算法</h4><p>原理：三角形为凸多边形，直线与该图形的的交点只有0或2，所以可以从上至下扫描。</p>
+<p>进一步用平行线两条可以确定中部均在三角形中。</p>
+<p>打印出来的红色恰恰与显示器发出的原色相反，才能反射对应颜色的光。</p>
+<p>在采样后并不像原先就是锯齿走样。</p>
+<h4 id="摩尔纹"><a href="#摩尔纹" class="headerlink" title="摩尔纹"></a>摩尔纹</h4><p>在两种采样率重合下造成的走样在时间空间上的表现。人眼的采样跟不上实际运动的速率。</p>
+<h3 id="Antialiasing（反走样）"><a href="#Antialiasing（反走样）" class="headerlink" title="Antialiasing（反走样）"></a>Antialiasing（反走样）</h3><p>原因：采样率低，信号过快</p>
+<ul>
+<li>前者可用提升清晰度解决。</li>
+<li>后者用于降低原始信号的频率（在采样前故意模糊）在模糊的边缘用更但的颜色</li>
+</ul>
+<p><img src="/../images/posts/image-20221022184817686.png" alt="image-20221022184817686"></p>
+<p>先做滤波再做采样。</p>
+<h4 id="傅里叶变化"><a href="#傅里叶变化" class="headerlink" title="傅里叶变化"></a>傅里叶变化</h4><p><img src="/../images/posts/image-20221022185037666.png" alt="image-20221022185037666"></p>
+<p>任何一个信号都可以表示为三角函数的叠加。对高频信号进行采样时很难根据信号分别出原本的信息。</p>
+<h4 id="filtering（滤波）"><a href="#filtering（滤波）" class="headerlink" title="filtering（滤波）"></a>filtering（滤波）</h4><p>实际上是一种卷积，进行了降频。在图像空间上求了平均。在某一小范围（一个像素）内进行类似归一的操作。</p>
+<p>去掉高频后会造成图片失真。内部高频得以保留。</p>
+<p>对一张图像进行傅里叶变换，其内容主要是在低频变换。梯度变化比较剧烈的地方一般为高频。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://vshare.sjtu.edu.cn/play/584472b8cb0d11df3c5326ac17e69120">9月28日一、二节教学视频</a></li>
+<li>大作业布置，11周中期检查。</li>
+<li><img src="/../images/posts/image-20221022201426473.png" alt="image-20221022201426473"></li>
+</ul>
+<h2 id="第三周"><a href="#第三周" class="headerlink" title="第三周"></a>第三周</h2><p>续trans 将连续空间表达变为像素的过程就是采样。</p>
+<h4 id="颜色平均"><a href="#颜色平均" class="headerlink" title="颜色平均"></a>颜色平均</h4><p>根据某一像素内图形的面积求内部的平均颜色。（并不好求）内部有各种图形大小的计算。</p>
+<h4 id="MSAA-超级采样"><a href="#MSAA-超级采样" class="headerlink" title="MSAA 超级采样"></a>MSAA 超级采样</h4><p>在一个像素内部进行4*4的采样，用一个点表示亚像素，也就是将边缘灰度划分为12等。</p>
+<p>整体采样量产生了较大幅度的提升</p>
+<h4 id="FSAA-快速近似"><a href="#FSAA-快速近似" class="headerlink" title="FSAA 快速近似"></a>FSAA 快速近似</h4><p>先产生锯齿图片，然后对边界进行模糊‘</p>
+<h4 id="TAA-持续反走样"><a href="#TAA-持续反走样" class="headerlink" title="TAA 持续反走样"></a>TAA 持续反走样</h4><p>对某一帧高效使用，另一帧沿用求平均。</p>
+<p>反走样技术并不增加分辨率，超采样会进行分辨率提升。</p>
+<h2 id="lllumination-and-shading"><a href="#lllumination-and-shading" class="headerlink" title="lllumination and shading"></a>lllumination and shading</h2><h3 id="ray-tracing"><a href="#ray-tracing" class="headerlink" title="ray tracing"></a>ray tracing</h3><h3 id="shading"><a href="#shading" class="headerlink" title="shading"></a>shading</h3><p>获取表面反射量的步骤，包括透明度、材质，是一种着色效果。</p>
+<p>要求几何模型拥有一定的色泽效果。</p>
+<p>对物体表面的法向量进行一个比较 </p>
+<h3 id="lighting"><a href="#lighting" class="headerlink" title="lighting"></a>lighting</h3><p>光是来自于光源的东西。</p>
+<p>真实感渲染中光是重要因素，不强调真实感还有别的作用。</p>
+<h4 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h4><h5 id="平行光"><a href="#平行光" class="headerlink" title="平行光"></a>平行光</h5><p>影子平行 长度相等。</p>
+<h5 id="点光源："><a href="#点光源：" class="headerlink" title="点光源："></a>点光源：</h5><p>向后逐渐面变广 强度变低。</p>
+<ul>
+<li>特殊（聚光灯）角度增加光强本身就衰减。</li>
+<li>投射面积为圆锥。</li>
+</ul>
+<h4 id="透明材质"><a href="#透明材质" class="headerlink" title="透明材质"></a>透明材质</h4><p>blending（混色效果）将后面的材质向前并入。alpha通道 反映当前颜色方便混色。</p>
 
       
     </div>
@@ -200,6 +259,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2022/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          计算机网络 不知道
+        
+      </div>
+    </a>
   
   
     <a href="/2022/10/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%AC%AC%E4%BA%94%E5%91%A8/" id="article-nav-older" class="article-nav-link-wrap">
@@ -242,15 +310,15 @@
       <ul>
         
           <li>
+            <a href="/2022/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/">计算机网络 不知道</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%A4%8D%E4%B9%A0/">计算机图形学 复习</a>
           </li>
         
           <li>
             <a href="/2022/10/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%AC%AC%E4%BA%94%E5%91%A8/">计算机图形学 第五周</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/">计算机网络 不知道</a>
           </li>
         
           <li>
