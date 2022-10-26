@@ -71,6 +71,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-计算机图形学-10月26日" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-10%E6%9C%8826%E6%97%A5/" class="article-date">
+  <time class="dt-published" datetime="2022-10-26T00:00:10.000Z" itemprop="datePublished">2022-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/10/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-10%E6%9C%8826%E6%97%A5/">计算机图形学 10月26日</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/../images/posts/image-20221026080148038.png" alt="image-20221026080148038"></p>
+<h1 id="3D模型的网格化"><a href="#3D模型的网格化" class="headerlink" title="3D模型的网格化"></a>3D模型的网格化</h1><p>网格简化也是工作之一。</p>
+<h1 id="光线追踪"><a href="#光线追踪" class="headerlink" title="光线追踪"></a>光线追踪</h1><p>图形学是依靠一系列流程重建或者建立世界的流程。</p>
+<ul>
+<li>实时渲染：与真实世界相比效果不够好。</li>
+<li>离线渲染：在牺牲速度与实时性上拿出高级效果。（光线追踪）</li>
+</ul>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>上世纪五六十年代开始就已经成熟。</p>
+<p>问题出在实时渲染无法满足软硬阴影的要求。</p>
+<h3 id="基本的光追算法"><a href="#基本的光追算法" class="headerlink" title="基本的光追算法"></a>基本的光追算法</h3><h4 id="光线"><a href="#光线" class="headerlink" title="光线"></a>光线</h4><ul>
+<li><p>存在一个产生光的光源</p>
+</li>
+<li><p>光的粒子在遇到反射面后会以固定的方式进行反射</p>
+</li>
+</ul>
+<h4 id="1968算法（Ray-Casting）"><a href="#1968算法（Ray-Casting）" class="headerlink" title="1968算法（Ray-Casting）"></a>1968算法（Ray-Casting）</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="/../images/posts/image-20221026083919065.png" alt="image-20221026083919065"></h4><p>从眼睛连线到屏幕上像素点，延长线到场景内 做逆向光路。将交点与光源连线，若与场景中实物相交，说明该点处为阴影。</p>
+<h4 id="透明物件的加入"><a href="#透明物件的加入" class="headerlink" title="透明物件的加入"></a>透明物件的加入</h4><p><img src="/../images/posts/image-20221026091310951.png" alt="image-20221026091310951"></p>
+<p>在内部进行了一个递归逻辑。从眼睛开始逐步转移观察点位置（依照镜面的出现进行转移）。直到光临陆尚不存在任何东西或者已经到光源处。</p>
+<h3 id="Ray-Intersection"><a href="#Ray-Intersection" class="headerlink" title="Ray Intersection"></a>Ray Intersection</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-10%E6%9C%8826%E6%97%A5/" data-id="cl9pmp2f50000m0ul7evv96lx" data-title="计算机图形学 10月26日" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-计算机网络-不知道" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/" class="article-date">
@@ -352,6 +408,48 @@
 <li>投射面积为圆锥。</li>
 </ul>
 <h4 id="透明材质"><a href="#透明材质" class="headerlink" title="透明材质"></a>透明材质</h4><p>blending（混色效果）将后面的材质向前并入。alpha通道 反映当前颜色方便混色。</p>
+<h1 id="第四周-第一节"><a href="#第四周-第一节" class="headerlink" title="第四周 第一节"></a>第四周 第一节</h1><p>上节课的问题主要集中在着色，根据光照信息的到点的颜色。</p>
+<p>真实场景的颜色的获得方式。</p>
+<p>光栅化后的着色</p>
+<h2 id="布林冯-光照模型"><a href="#布林冯-光照模型" class="headerlink" title="布林冯 光照模型"></a>布林冯 光照模型</h2><p><img src="/../images/posts/image-20221026182820694.png" alt="image-20221026182820694"></p>
+<p>局部某一点的着色仅与其周围空间有关。</p>
+<p>光照学的公式 为经验性的表达 而与物理性的东西无关。</p>
+<h3 id="光照的种类"><a href="#光照的种类" class="headerlink" title="光照的种类"></a>光照的种类</h3><ul>
+<li>高光 specular</li>
+<li>漫反射 diffuse</li>
+<li>泛光（反射光为光源、到处都有的光）ambient</li>
+</ul>
+<p>均视为局部光，仅与附近有关（local）</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><ul>
+<li>观测方向</li>
+<li>法向量信息</li>
+<li>光路</li>
+<li>表面属性</li>
+<li>光源属性</li>
+</ul>
+<h3 id="shading（着色）"><a href="#shading（着色）" class="headerlink" title="shading（着色）"></a>shading（着色）</h3><p>与shadow（阴影）不同。为局部光照模型，shadow会考虑到全局的互相影响。</p>
+<p><img src="/../images/posts/image-20221026184254001.png" alt="image-20221026184254001"></p>
+<p>如图，虽然进行了shading，但是不存在shadow。</p>
+<h4 id="Geometic"><a href="#Geometic" class="headerlink" title="Geometic"></a>Geometic</h4><p>在整个物体是由多边形构成的情况下，实际法向量为不光滑曲面链接，但是要染成光滑面，因此在交错处求各个面的平均法向量。（shading normal）</p>
+<h4 id="Diffuse（漫反射）"><a href="#Diffuse（漫反射）" class="headerlink" title="Diffuse（漫反射）"></a>Diffuse（漫反射）</h4><p>光射入后向各个方向的反射光一致。不同的入射方式对应的反射光能量不同，斜射反射光强 发现家教cos关系。</p>
+<p>与入射光 入射角 表面材质有关。</p>
+<h5 id="衰减"><a href="#衰减" class="headerlink" title="衰减"></a>衰减</h5><p><img src="/../images/posts/image-20221026184903351.png" alt="image-20221026184903351"></p>
+<p>如果光从下方射入，就不可能发出反射。k变大，光强变大，反射光变强。</p>
+<h4 id="镜面光（specular）"><a href="#镜面光（specular）" class="headerlink" title="镜面光（specular）"></a>镜面光（specular）</h4><p>不发生衰减的同时向某个固定方向进行转换。</p>
+<p>真实情况是在固定方向上光强更强。</p>
+<p><img src="/../images/posts/image-20221026190911234.png" alt="image-20221026190911234"></p>
+<p>冯反射模型 则使用β角，</p>
+<p><img src="/../images/posts/image-20221026195646962.png" alt="image-20221026195646962"></p>
+<p>将所有的反射角当作主反射角使用。</p>
+<p><img src="/../images/posts/image-20221026195940183.png" alt="image-20221026195940183"></p>
+<p>很多个尾端镜面构成的粗糙面就是漫反射。</p>
+<p><img src="/../images/posts/image-20221026200446955.png" alt="image-20221026200446955"></p>
+<p>有的教材会在后两者上加个括号。</p>
+<h4 id="shading-区分"><a href="#shading-区分" class="headerlink" title="shading 区分"></a>shading 区分</h4><p><img src="/../images/posts/image-20221026200611979.png" alt="image-20221026200611979"></p>
+<p>面 顶点 像素点（冯shading）。 按照像素点效果最好。</p>
+<h4 id="gouraud-shading"><a href="#gouraud-shading" class="headerlink" title="gouraud shading"></a>gouraud shading</h4><p>顶点着色 高光细节较差 对亮点之间进行光插值</p>
+<p>冯shading是插值法向量 根据法向量打光。对于规则图形例如高面数球体区别不大</p>
+<h1 id="10月12日-12节"><a href="#10月12日-12节" class="headerlink" title="10月12日 12节"></a>10月12日 12节</h1><p>图形流水线复习。</p>
 
       
     </div>
@@ -799,64 +897,6 @@
 
 
   
-    <article id="post-计算机图形学-投影" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%8A%95%E5%BD%B1/" class="article-date">
-  <time class="dt-published" datetime="2022-09-28T00:02:07.000Z" itemprop="datePublished">2022-09-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%8A%95%E5%BD%B1/">计算机图形学 投影</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="/../images/posts/image-20220928080237846.png" alt="image-20220928080237846"></p>
-<p>光栅化采样的效果 </p>
-<ul>
-<li>将三角形边缘填充用不同颜色像素块执行</li>
-</ul>
-<p>课程大作业</p>
-<p><img src="/../images/posts/image-20220928083616701.png" alt="image-20220928083616701"></p>
-<ul>
-<li><p>光线追踪</p>
-<p>-<img src="/../images/posts/image-20220928083812823.png" alt="image-20220928083812823"></p>
-<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-<p><img src="/../images/posts/image-20220928084002872.png" alt="image-20220928084002872"></p>
-<p>shading models</p>
-<ul>
-<li>根据光线的角度调整染色</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E6%8A%95%E5%BD%B1/" data-id="cl93g2ih2000e18ulbr9k0uoa" data-title="计算机图形学 投影" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -893,6 +933,10 @@
       <ul>
         
           <li>
+            <a href="/2022/10/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-10%E6%9C%8826%E6%97%A5/">计算机图形学 10月26日</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/">计算机网络 不知道</a>
           </li>
         
@@ -906,10 +950,6 @@
         
           <li>
             <a href="/2022/10/11/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/">信息抽取</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/11/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20CSP/">(no title)</a>
           </li>
         
       </ul>
