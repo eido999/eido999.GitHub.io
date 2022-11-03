@@ -16,8 +16,16 @@
 <meta property="og:image" content="http://example.com/images/posts/image-20221026080148038.png">
 <meta property="og:image" content="http://example.com/images/posts/image-20221026083919065.png">
 <meta property="og:image" content="http://example.com/images/posts/image-20221026091310951.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221028110524426.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221028105514515.png">
+<meta property="og:image" content="http://example.com/2022/10/26/images/posts/image-20221028111749644.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221028112532914.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221028113805092.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221102082726065.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221102083237973.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221102091336481.png">
 <meta property="article:published_time" content="2022-10-26T00:00:10.000Z">
-<meta property="article:modified_time" content="2022-10-26T01:40:54.587Z">
+<meta property="article:modified_time" content="2022-11-02T01:42:07.990Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/posts/image-20221026080148038.png">
@@ -117,7 +125,48 @@
 <h4 id="1968算法（Ray-Casting）"><a href="#1968算法（Ray-Casting）" class="headerlink" title="1968算法（Ray-Casting）"></a>1968算法（Ray-Casting）</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="/../images/posts/image-20221026083919065.png" alt="image-20221026083919065"></h4><p>从眼睛连线到屏幕上像素点，延长线到场景内 做逆向光路。将交点与光源连线，若与场景中实物相交，说明该点处为阴影。</p>
 <h4 id="透明物件的加入"><a href="#透明物件的加入" class="headerlink" title="透明物件的加入"></a>透明物件的加入</h4><p><img src="/../images/posts/image-20221026091310951.png" alt="image-20221026091310951"></p>
 <p>在内部进行了一个递归逻辑。从眼睛开始逐步转移观察点位置（依照镜面的出现进行转移）。直到光临陆尚不存在任何东西或者已经到光源处。</p>
-<h3 id="Ray-Intersection"><a href="#Ray-Intersection" class="headerlink" title="Ray Intersection"></a>Ray Intersection</h3>
+<p>这里是将球体看成了标准镜面。</p>
+<h4 id="经典："><a href="#经典：" class="headerlink" title="经典："></a>经典：</h4><p>遍历全部三角形（外面套的是递归逻辑）</p>
+<p>一根直线与三角形求交（法向量？）</p>
+<ul>
+<li>判断与平面交（法向量）</li>
+<li>判断交点是否在三角形内部（交点+三边法向量叉乘）</li>
+<li>用连线构成图形内角和？也可以用弧长的代数和。为零在外部 为周长在内部 半弧长在边上</li>
+<li><img src="/../images/posts/image-20221028110524426.png" alt="image-20221028110524426"></li>
+<li></li>
+</ul>
+<h4 id="多边形网格"><a href="#多边形网格" class="headerlink" title="多边形网格"></a>多边形网格</h4><p>求交（只有偶数个交点即在外面 奇数在里面）</p>
+<p>求线性组合的系数各个系数均大于零，（用三个顶点来表示交点）</p>
+<h4 id="从最近的开始："><a href="#从最近的开始：" class="headerlink" title="从最近的开始："></a>从最近的开始：</h4><p>区块划分？切面？（包围盒技术）实际上是分层的思路（树）。</p>
+<p>3D空间中求包络面暂时还是用遍历（仅适用于方形的形状AABB。）</p>
+<p>包围盒在碰撞等中也可以使用。</p>
+<h5 id="包围盒的问题"><a href="#包围盒的问题" class="headerlink" title="包围盒的问题"></a>包围盒的问题</h5><p>盒子中的内容物太少，或者过于密集导致分层效果不好。</p>
+<h5 id="调整"><a href="#调整" class="headerlink" title="调整"></a>调整</h5><p>按照物体坐标系进行建立（OBB）建立盒子的难度提升。</p>
+<h3 id="Ray-Intersection"><a href="#Ray-Intersection" class="headerlink" title="Ray Intersection"></a>Ray Intersection</h3><p>场景中有无数个三角形构成，按照以上思路进行求交。</p>
+<p><img src="/../images/posts/image-20221028105514515.png" alt="image-20221028105514515"></p>
+<h4 id="跟盒子求交"><a href="#跟盒子求交" class="headerlink" title="跟盒子求交"></a>跟盒子求交</h4><h5 id="直线与长方形求交"><a href="#直线与长方形求交" class="headerlink" title="直线与长方形求交"></a>直线与长方形求交</h5><ul>
+<li><p>与四条边求交</p>
+</li>
+<li><p>拆解为两对平行线 缩小空间（更复杂？）</p>
+</li>
+</ul>
+<img src="../images/posts/image-20221028111749644.png">
+
+<p>长方形有两个in out</p>
+<p>对应的盒子有三个in out(三个维度)</p>
+<p><img src="/../images/posts/image-20221028112532914.png" alt="image-20221028112532914"></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/keneyr/article/details/83871170">(94条消息) 图形学初步–裁剪算法之Liang－Barsky算法_keneyr的博客-CSDN博客_liang-barsky</a></p>
+<h4 id="空间刨分技术"><a href="#空间刨分技术" class="headerlink" title="空间刨分技术"></a>空间刨分技术</h4><p>划为某一个平面（切？）</p>
+<p><img src="/../images/posts/image-20221028113805092.png" alt="image-20221028113805092"></p>
+<p>能够强调局部问题。</p>
+<h1 id="计算机图形学-11月2日"><a href="#计算机图形学-11月2日" class="headerlink" title="计算机图形学 11月2日"></a>计算机图形学 11月2日</h1><p>空间刨分钟正在物体内部时时空心，其中可以进行一个省略。</p>
+<p><img src="/../images/posts/image-20221102082726065.png" alt="image-20221102082726065"></p>
+<h5 id="KD树"><a href="#KD树" class="headerlink" title="KD树"></a>KD树</h5><p>用旋转逐个查找的方式进行寻找。</p>
+<p><img src="/../images/posts/image-20221102083237973.png" alt="image-20221102083237973"></p>
+<p>按照物体多少，每次选取一个维度进行二分，按照控件本身信息密度进行二分。</p>
+<h5 id="BSP树"><a href="#BSP树" class="headerlink" title="BSP树"></a>BSP树</h5><p>根据边界要进行多次划分，有可能将球体切开，所以现在很少用。</p>
+<p><img src="/../images/posts/image-20221102091336481.png" alt="image-20221102091336481"></p>
+
       
     </div>
     <footer class="article-footer">
@@ -130,6 +179,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2022/10/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-10%E6%9C%8827%E6%97%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          人工智能 10月27日
+        
+      </div>
+    </a>
   
   
     <a href="/2022/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/" id="article-nav-older" class="article-nav-link-wrap">
@@ -172,6 +230,10 @@
       <ul>
         
           <li>
+            <a href="/2022/10/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-10%E6%9C%8827%E6%97%A5/">人工智能 10月27日</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-10%E6%9C%8826%E6%97%A5/">计算机图形学 10月26日</a>
           </li>
         
@@ -185,10 +247,6 @@
         
           <li>
             <a href="/2022/10/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%AC%AC%E4%BA%94%E5%91%A8/">计算机图形学 第五周</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/11/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/">信息抽取</a>
           </li>
         
       </ul>
