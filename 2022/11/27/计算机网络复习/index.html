@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机网络复习 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="[TOC] 第一章：计算机网络 绪论 概念分散的独立计算机系统通过通信设备与线路进行连接后由完善软件实现资源共享与信息传递。 其中连接部分为拓扑结构，而之后的内容由软件或协议完成。 互连自治的计算机集合。（自治实际存疑，无主从关系） 功能数据通信、资源共享 分布式处理、提高可靠性 （多路）负载均衡（共同完成任务） 组成组成部分硬件 软件 协议：规则集合 工作方式边缘部分：用户可直接使用的终端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络复习">
+<meta property="og:url" content="http://example.com/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] 第一章：计算机网络 绪论 概念分散的独立计算机系统通过通信设备与线路进行连接后由完善软件实现资源共享与信息传递。 其中连接部分为拓扑结构，而之后的内容由软件或协议完成。 互连自治的计算机集合。（自治实际存疑，无主从关系） 功能数据通信、资源共享 分布式处理、提高可靠性 （多路）负载均衡（共同完成任务） 组成组成部分硬件 软件 协议：规则集合 工作方式边缘部分：用户可直接使用的终端">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127144932267.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127130318974.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127125910739.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127130931571.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127131136711.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127132055438.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127132352807.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127132454497.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127133316753.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127135407617.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127134442453.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127134951132.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127135100034.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127135350205.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127141159810.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127141951673.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127144147689.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127144453236.png">
+<meta property="og:image" content="http://example.com/images/posts/image-20221127144721667.png">
+<meta property="article:published_time" content="2022-11-27T04:54:48.000Z">
+<meta property="article:modified_time" content="2022-11-27T07:34:02.210Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/posts/image-20221127144932267.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机网络复习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/" class="article-date">
+  <time class="dt-published" datetime="2022-11-27T04:54:48.000Z" itemprop="datePublished">2022-11-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机网络复习
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h1 id="第一章：计算机网络"><a href="#第一章：计算机网络" class="headerlink" title="第一章：计算机网络"></a>第一章：计算机网络</h1><p><img src="/../images/posts/image-20221127144932267.png" alt="image-20221127144932267"></p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p><img src="/../images/posts/image-20221127130318974.png" alt="image-20221127130318974"></p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>分散的独立计算机系统通过通信设备与线路进行连接后由完善软件实现资源共享与信息传递。</p>
+<p>其中连接部分为拓扑结构，而之后的内容由软件或协议完成。</p>
+<p>互连自治的计算机集合。（自治实际存疑，无主从关系）</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>数据通信、资源共享</p>
+<p>分布式处理、提高可靠性 （多路）负载均衡（共同完成任务）</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><h4 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h4><p>硬件</p>
+<p>软件</p>
+<p>协议：规则集合</p>
+<h4 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h4><p>边缘部分：用户可直接使用的终端 </p>
+<ul>
+<li>C&#x2F;S 服务器方式</li>
+<li>P2P方式</li>
+</ul>
+<p>核心部分：如路由器等服务中断</p>
+<h4 id="功能组成"><a href="#功能组成" class="headerlink" title="功能组成"></a>功能组成</h4><p>通信子网：实现通信</p>
+<p>资源子网：实现资源共享</p>
+<p><img src="/../images/posts/image-20221127125910739.png" alt="image-20221127125910739"></p>
+<p>传输层算是中间夹着那一层，资源子网实现信息生成 ，后者实现传递</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li><p>按分布范围 ：广域网WAN 交换技术 城域网 局域网WAN（广播技术） 个人区域网PAN</p>
+</li>
+<li><p>按使用者</p>
+<ul>
+<li>公用网</li>
+<li>专用网</li>
+</ul>
+</li>
+<li><p>按交换技术</p>
+<ul>
+<li>电路</li>
+<li>报文</li>
+<li>分组</li>
+</ul>
+</li>
+<li><p>按拓扑结构</p>
+<ul>
+<li>总线型</li>
+<li>星型</li>
+<li>环形</li>
+<li>网状型</li>
+</ul>
+</li>
+<li><p>按传播技术</p>
+<ul>
+<li>广播式网络：共享公共通信信道</li>
+<li>点对点网络：分组存储 路由转发</li>
+</ul>
+</li>
+</ul>
+<h2 id="标准化工作与相关组织"><a href="#标准化工作与相关组织" class="headerlink" title="标准化工作与相关组织"></a>标准化工作与相关组织</h2><p><img src="/../images/posts/image-20221127130931571.png" alt="image-20221127130931571"></p>
+<h3 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h3><p>要实现不同厂商软硬件的相互连通 要遵守相应的标准</p>
+<ul>
+<li>法定标准 （OSI）</li>
+<li>事实标准：主流变成约定 （TCP&#x2F;IP）大卡变成小卡</li>
+</ul>
+<p>标准的制定</p>
+<h5 id="RFC（请求评论）到因特网标准）"><a href="#RFC（请求评论）到因特网标准）" class="headerlink" title="RFC（请求评论）到因特网标准）"></a>RFC（请求评论）到因特网标准）</h5><ul>
+<li>因特网草案提交到rfc编辑</li>
+<li>建议标准 rfc文档</li>
+<li>草案标准</li>
+<li>因特网标准成立</li>
+</ul>
+<h4 id="相关组织"><a href="#相关组织" class="headerlink" title="相关组织"></a>相关组织</h4><ul>
+<li>标准化组织ISO</li>
+<li>电信联盟 ITU</li>
+<li>电子电气工程师学会 IEEE （IEEE802 5G）</li>
+<li>因特网工程组  IETF</li>
+</ul>
+<h2 id="速率-带宽-吞吐量-时延-时延带宽积-RTT-利用率"><a href="#速率-带宽-吞吐量-时延-时延带宽积-RTT-利用率" class="headerlink" title="速率 带宽 吞吐量 时延 时延带宽积 RTT 利用率"></a>速率 带宽 吞吐量 时延 时延带宽积 RTT 利用率</h2><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><p>数据率 数据传输率 比特率</p>
+<p>比特：1&#x2F;0</p>
+<p>连接在网络上的主句在信道上发送数据位数的速率。</p>
+<p><img src="/../images/posts/image-20221127131136711.png" alt="image-20221127131136711"></p>
+<p>一字节为八个比特。</p>
+<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><p>原本只某个信号能占用的频带宽度。在链路入口发送数据的速率</p>
+<p>在计算机网络中表示两点之间的最高数据率。（网络设备支持的最高速度）</p>
+<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4><p>在单位时间内通过某个信道的数据量</p>
+<p>收到网络带宽跟限定速率（服务器能力本身也有限制）的限制。</p>
+<p><img src="/../images/posts/image-20221127132055438.png" alt="image-20221127132055438"></p>
+<h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><p>数据 从网络 一段传送到另一端使用的事件</p>
+<ul>
+<li>发送时延 从开始到最后一个比特发送完毕用时 <img src="/../images/posts/image-20221127132352807.png" alt="image-20221127132352807"></li>
+<li>传播时延 链路上传播一定长度用时，与电磁波实际速度与链路长度有关 2 10 *8次方米每秒。<img src="/../images/posts/image-20221127132454497.png" alt="image-20221127132454497"></li>
+<li>排队时延 等待输出、输入链路可用 在交换区对链路上传来的数据进行处理的时延</li>
+<li>处理时延 检错 找出口。</li>
+</ul>
+<p>高速链路在发送时延</p>
+<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><p>时延带宽积 &#x3D; 传播时延$\times$带宽 代表以比特位单位的链路长度 代表着链路中此时此刻的比特两</p>
+<h3 id="RTT"><a href="#RTT" class="headerlink" title="RTT"></a>RTT</h3><p>往返时延：从发送方发送数据开始 到发送方收到接受方的确认为止经历的时延。（PING）</p>
+<p>RTT越大 在收到确认之前可发送的数据越多。</p>
+<p>RTT包括</p>
+<ul>
+<li>往返传播时延（*2）</li>
+<li>对方处理的事件</li>
+<li>不包括上信道的时间</li>
+</ul>
+<h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><ul>
+<li>信道利用率 ：通信链路被完全使用</li>
+<li>网络利用率：信道利用率加权平均值（一直占满RTT增大）反而会下降</li>
+</ul>
+<p><img src="/../images/posts/image-20221127133316753.png" alt="image-20221127133316753"></p>
+<h2 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h2><p><img src="/../images/posts/image-20221127135407617.png" alt="image-20221127135407617"></p>
+<p>发送一份文件</p>
+<ul>
+<li>对通信链路进行激活</li>
+<li>告诉网络如何识别目的主机</li>
+<li>确认对面主机是否做好准备</li>
+<li>做好意外处置工作</li>
+</ul>
+<p>将问题进行分层处理包装</p>
+<p><img src="/../images/posts/image-20221127134442453.png" alt="image-20221127134442453"></p>
+<p>实体- 每一层当中的活动元素回味对等实体 如酒瓶棉花。</p>
+<p>协议 对等实体之间进行的关系架构 有语法 语义 同步等</p>
+<p>接口 没两层之间的关节位置</p>
+<p>服务 下级为上级进行服务 先装箱 后运输。</p>
+<h3 id="如何分层？"><a href="#如何分层？" class="headerlink" title="如何分层？"></a>如何分层？</h3><p>各层之间最好相对杜梨 相互交流仅靠接口完成 分层的时候结构上可进行分割。</p>
+<p>保持下层对上层独立性 上层单项使用下层提供服务 整个结构支持标准化工作。</p>
+<h3 id="分层结构-1"><a href="#分层结构-1" class="headerlink" title="分层结构"></a>分层结构</h3><p><img src="/../images/posts/image-20221127134951132.png" alt="image-20221127134951132"></p>
+<p>把三层同时抽出来</p>
+<p><img src="/../images/posts/image-20221127135100034.png" alt="image-20221127135100034"></p>
+<p>每一层在前面疯狂的加PCI。</p>
+<p><img src="/../images/posts/image-20221127135350205.png" alt="image-20221127135350205"></p>
+<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><p>7层OSI 4层TCP&#x2F;IP（后者式实际使用中使用的标准）</p>
+<p>之后还有五层的体系结构</p>
+<h3 id="体系结构的历史"><a href="#体系结构的历史" class="headerlink" title="体系结构的历史"></a>体系结构的历史</h3><p>只有相同产品才能进行的相同通信。发展到TCP&#x2F;IP等情况。OSI的理论很成功 但是市场很失败。</p>
+<p><img src="/../images/posts/image-20221127141159810.png" alt="image-20221127141159810"></p>
+<p><img src="/../images/posts/image-20221127141951673.png" alt="image-20221127141951673"></p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>所有与用户进行交互并产生网络流量的程序。</p>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><p>用于处理两个通信系统中交换信息的表示方式</p>
+<ul>
+<li>数据格式变换。</li>
+<li>对数据进行加密解密。</li>
+<li>数据的压缩与数据的恢复。</li>
+</ul>
+<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><ul>
+<li><p>向表层用户实体进程提供建立连接并在连接上有序地传输数据</p>
+<ul>
+<li><p>是会话，也是建立同步（SYN）</p>
+</li>
+<li><p>功能</p>
+<ul>
+<li>建立管理 终止会话</li>
+<li>建立校验点以保证可从校验点恢复通信。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>资源子网与通信子网接口 上层端到端（只有起点与终点） 下层点到点。</p>
+<p>负责主机中两个进程之间地通信 为端到端 传输单位为报文段或用户数据包</p>
+<ul>
+<li>可靠传输确认、执行不需要大量确认机制的不可靠传输</li>
+<li>差错控制</li>
+<li>流量控制</li>
+<li>复用分用 多个进程同时使用服务，将收到的信息分别交给相应的进程。</li>
+</ul>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>将某个信息分组从源端传送到目的端，为分组交换网上的不同主机提供通信服务。 传输段位为数据报</p>
+<ul>
+<li>路由选择 选择目前最优拓扑路径</li>
+<li>流量控制 限制发送方</li>
+<li>差错控制</li>
+<li>拥塞控制 现实整体网路情况。</li>
+</ul>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><p>主要任务是把数据包组成帧。数据链路层传输单位为帧。</p>
+<ul>
+<li>成帧：制作一个帧</li>
+<li>差错控制 检查与纠正</li>
+<li>流量控制 确认缓存</li>
+<li>对信道的访问控制 （访问控制）</li>
+</ul>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>物理媒体上实现比特流的透明传输(不论数据类型均可传输) 传输单位为比特。</p>
+<ul>
+<li>定义接口</li>
+<li>定义传输模式</li>
+<li>定义传输速率</li>
+<li>比特的同步</li>
+<li>比特的编码。</li>
+</ul>
+<h2 id="TCP-x2F-IP-四层模型-与五层模型"><a href="#TCP-x2F-IP-四层模型-与五层模型" class="headerlink" title="TCP&#x2F;IP 四层模型 与五层模型"></a>TCP&#x2F;IP 四层模型 与五层模型</h2><p><img src="/../images/posts/image-20221127144147689.png" alt="image-20221127144147689"></p>
+<ul>
+<li>都基于独立的协议栈</li>
+<li>适用于所有厂家的产品</li>
+</ul>
+<p>不同：</p>
+<ul>
+<li>OSI不针对特定协议</li>
+<li>TCP&#x2F;IP是针对IP进行设计的，网络层侧重无连接形式。</li>
+<li><img src="/../images/posts/image-20221127144453236.png" alt="image-20221127144453236"></li>
+</ul>
+<h3 id="抽象出的五层参考模型"><a href="#抽象出的五层参考模型" class="headerlink" title="抽象出的五层参考模型"></a>抽象出的五层参考模型</h3><p><img src="/../images/posts/image-20221127144721667.png" alt="image-20221127144721667"></p>
+<h1 id="第二章-：物理层"><a href="#第二章-：物理层" class="headerlink" title="第二章 ：物理层"></a>第二章 ：物理层</h1><ul>
+<li>通信基础</li>
+<li>两个公式（求极限传输速率）</li>
+<li>看波形图判断信号</li>
+<li>传输介质</li>
+<li>物理层设备</li>
+</ul>
+<h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><p>如何在链接各种计算机的传输媒体上传输数据比特流 不是具体的传输媒体。</p>
+<p>确定与传输媒体接口有关的一些特性（定义标准）</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>机械特性 定义物理连接的特性 规格 接口形状 引线引脚数量</li>
+<li>电气特性 传输二进制位时的电压范围与距离限制。</li>
+<li>功能特性 物理数据的具体含义</li>
+<li>规范特性 工作顺序与具体含义</li>
+</ul>
+<h2 id="数据通信基础知识"><a href="#数据通信基础知识" class="headerlink" title="数据通信基础知识"></a>数据通信基础知识</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/" data-id="claz1prar00038culblko7j4v" data-title="计算机网络复习" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/11/08/%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%BB%BB%E5%8A%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/">计算机网络复习</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/08/%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%BB%BB%E5%8A%A1/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/">信息抽取 观点抽取</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E8%A7%82%E7%82%B9%E6%8A%BD%E5%8F%96/">信息抽取 关系抽取</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -71,6 +71,474 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-人工智能A" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/22/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA/" class="article-date">
+  <time class="dt-published" datetime="2022-09-22T04:56:14.000Z" itemprop="datePublished">2022-09-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/22/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA/">人工智能A</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA.assets/image-20220922125648468.png" alt="image-20220922125648468"></p>
+<p>第二次课：搜索</p>
+<p>agents 用状态转换的方式对搜索状态进行标识 </p>
+<p>atomic：而转台是内部不可分的原始转台</p>
+<p>factor：状态中有各种元素复合而成的</p>
+<p>structed ：结构化的智能体</p>
+<p>举例：扫地机器人的路线规划</p>
+<ul>
+<li><p>8谜题问题：<img src="/images/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA.assets/image-20220922130201415.png" alt="image-20220922130201415"></p>
+</li>
+<li><p>8皇后问题<img src="/images/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA.assets/image-20220922130210232.png" alt="image-20220922130210232">使得两两之间不处于同一行列对角线</p>
+</li>
+<li><p>算法的方式</p>
+</li>
+<li><p><img src="/images/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA.assets/image-20220922130505040.png" alt="image-20220922130505040"></p>
+<ul>
+<li>存在可固定的状态 （初始状态）</li>
+<li>factor存在某种移动方式</li>
+<li>需要寻找为的移动方式的组合</li>
+<li>每次移动会产生一定的代价</li>
+</ul>
+</li>
+<li><p>经典搜索算法</p>
+<ul>
+<li>无信息搜索（Uninformed） 没有与问题有关的具体信息</li>
+<li>有信息搜索</li>
+<li>要点<ul>
+<li>完备性</li>
+<li>复杂性</li>
+<li>有效性</li>
+</ul>
+</li>
+<li>无信息搜索<ul>
+<li>迭代加深搜索</li>
+<li>以路径COST为要求的搜索  每层为一为BFS 越长越长DFS或DFS反面</li>
+<li>BFS&#x2F;DFS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>启发式搜索</p>
+<ul>
+<li><p>启发函数（类似优化的思想 实际上是动态规划）例如贪心算法</p>
+<ul>
+<li><p>贪心best-first搜索：类似贪心算法设置一个评价函数 记录的是从起点到终点的直线距离 （是对于路径代价的一种简单估计）</p>
+</li>
+<li><p>A* 尽量判断较长路径并排除<img src="/images/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA.assets/image-20220922131845241.png" alt="image-20220922131845241"></p>
+</li>
+<li><p>可接受的启发式搜索</p>
+<ul>
+<li><p>定出的启发式函数估计出的代价一定要小于等于真实的代价</p>
+<p><img src="/images/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA.assets/image-20220922132219993.png" alt="image-20220922132219993"></p>
+<p>若启发函数为连续函数 路径cost沿着路经应该是非递减的</p>
+</li>
+<li><p>以代价为启发函数计算对象的时候将标准定义为向大的方向 减少漏看点位数</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA.assets/image-20220922133916101.png" alt="image-20220922133916101"></p>
+</li>
+</ul>
+</li>
+<li><p>非经典搜索方法（生成随机后记）</p>
+<ul>
+<li>high-climbing</li>
+<li>localing</li>
+<li>退火算法（生成随即状态后按一定比例进行转移）</li>
+<li>局部束搜索</li>
+<li>遗传算法（适合比较离散的数据）</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/22/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDA/" data-id="cl93g2igb000318ul0gxbhrjz" data-title="人工智能A" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-计算机图形学-transformation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-transformation/" class="article-date">
+  <time class="dt-published" datetime="2022-09-20T23:58:31.000Z" itemprop="datePublished">2022-09-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-transformation/">计算机图形学 transformation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-transformation.assets/image-20220921075945176.png" alt="image-20220921075945176"></p>
+<p>transformation（变换） 几何坐标系变换 用于顶点变换过程</p>
+<p>BASIC transformation 将局部坐标系统一到整体 旋转 平移 投影 全部用矩阵的方式进行表达</p>
+<ul>
+<li>平面上的坐标变换（顶点）<ul>
+<li>平移（scale）根据摸个参考位置为基点 按照具体比例进行放缩 基于比例矩阵相乘</li>
+<li>旋转 rotate 全部点用一个矩阵进行处理<img src="/../images/posts/image-20220921082055280.png" alt="image-20220921082055280"></li>
+</ul>
+</li>
+<li>齐次坐标系（平面）<ul>
+<li>平移变换 （坐标进行相应的加减）加法计算器（复杂）</li>
+<li>放缩 与比例相乘 乘法计算器<ul>
+<li>为了让这两个计算能够统一为一种运算<img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-transformation.assets/image-20220921082659267.png" alt="image-20220921082659267"></li>
+<li>引入的w被称为齐次坐标</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组合变换 存在不满足交换律的组合变化 </li>
+<li>3D变换<ul>
+<li>四个维度的齐次坐标（三个点一个齐次）</li>
+<li>旋转使用三个矩阵进行性传传处理处理万向节死锁</li>
+</ul>
+</li>
+</ul>
+<p>View and perspective（视点与投影）</p>
+<ul>
+<li><p>视点坐标系转换</p>
+<ul>
+<li>以视点为原点 朝向眼睛为Z中正方向 水平向右为X周 竖直向上为Y轴正方向</li>
+</ul>
+</li>
+<li><p>投影到屏幕面上</p>
+<ul>
+<li><p>具体投影方式为点投影</p>
+<p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-transformation.assets/image-20220921092101503.png" alt="image-20220921092101503"></p>
+</li>
+<li><p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-transformation.assets/image-20220921093034144.png" alt="image-20220921093034144"></p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-transformation/" data-id="cl93g2igy000c18ul4svea7z5" data-title="计算机图形学 transformation" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-计算机网络-物理层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/" class="article-date">
+  <time class="dt-published" datetime="2022-09-20T04:55:00.000Z" itemprop="datePublished">2022-09-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/">计算机网络 物理层</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82.assets/image-20220920125532250.png" alt="image-20220920125532250"></p>
+<p>物理层：在传输媒体上如何进行数据流的传输，不仅指具体的传输媒体</p>
+<p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82.assets/image-20220920130411697.png" alt="image-20220920130411697"></p>
+<p>WIFI可以穿透固体进行传播，但是在水中不能进行传播 潜艇只能用声纳进行交流。</p>
+<p>数据通信系统模型</p>
+<ul>
+<li><p>组件 </p>
+<ul>
+<li>源系统 发送端 （网卡即调制解调器）</li>
+<li>传输网络（公用电话网）</li>
+<li>目的系统</li>
+</ul>
+</li>
+<li><p>术语</p>
+<ul>
+<li>数据（data）消息实体</li>
+<li>信号（signal）数据的电磁或电气表现</li>
+<li>模拟信号（Analogous S）</li>
+<li>数字信号（Digital S）</li>
+</ul>
+</li>
+<li><p>信道</p>
+<ul>
+<li>晁某一个方向传送信息的媒体</li>
+<li>单项通信 （电视 广播）</li>
+<li>双向交替通信 不能同时发送 不能同时接受（对讲机）</li>
+<li>双向同时通信 可以同时发送 同时接受</li>
+</ul>
+</li>
+<li><p>常用编码方式</p>
+<p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82.assets/image-20220920133048200.png" alt="image-20220920133048200"></p>
+</li>
+</ul>
+<p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82.assets/image-20220920133255832.png" alt="image-20220920133255832"></p>
+<p>归零制：在一个时间片内存在几个向下脉冲就有几个零</p>
+<p>物理层：编码 调制（OFDM不完全是调制） 整层</p>
+<ul>
+<li><p>调制</p>
+<p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82.assets/image-20220920135806922.png" alt="image-20220920135806922"></p>
+<p>调制信号使之符合使用要求</p>
+<ul>
+<li>信道的极限容量<ul>
+<li>信道在传输信号过程中一定会存在失真</li>
+<li>传输速率越高 距离越远 媒体质量越差 失真越严重</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>香农公式 </p>
+</li>
+<li><p><img src="/images/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82.assets/image-20220920141214447.png" alt="image-20220920141214447"></p>
+</li>
+<li><p>C &#x3D; Width * log2（1+ Signal&#x2F;Noise）</p>
+</li>
+<li><p>信噪比越大 同一信道极限传输功率越高</p>
+</li>
+<li><p>只要未达到极限传输速率就有无差错传输方式</p>
+</li>
+</ul>
+<p>微波炉与WIFI均使用2.4G微波</p>
+<p>ADSL：可以根据用户的实时需求保证用户拥有较高的传输速率</p>
+<p>HFC网 光纤同轴电缆复合网络 其中管线负责主干网络传输。</p>
+<p><img src="/../images/posts/image-20220927130132279.png" alt="image-20220927130132279"></p>
+<p>电缆调制解调器：HFC网中用户端对数据进行处理的复杂调制解调器。</p>
+<p>FTTx技术 FIber to the 整栋楼的用户共享同一根光纤 好处是高速传输。</p>
+<p><img src="/../images/posts/image-20220927130625569.png" alt="image-20220927130625569"></p>
+<p>虽然每户摊到得得流量生成较高，但是在集体大量使用时候实际流量会小于声称值</p>
+<p>物理层的现状与发展：</p>
+<p>多种通信协议的产生 ： WIFI 蓝牙 4G</p>
+<p><img src="/../images/posts/image-20220927134813240.png" alt="image-20220927134813240"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/" data-id="cl93g2ihb000h18uld5v51sm0" data-title="计算机网络 物理层" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-信息抽取-概念与基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/20/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time class="dt-published" datetime="2022-09-19T23:56:10.000Z" itemprop="datePublished">2022-09-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/20/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E7%A1%80/">信息抽取 概念与基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/posts/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E7%A1%80.assets/image-20220920075647480.png" alt="image-20220920075647480"></p>
+<p>大作业开放命题，有三个参考命题</p>
+<p>信息抽取</p>
+<ul>
+<li><p>概念</p>
+<ul>
+<li>老定义：从文本中去抽取信息，并按预先定义的结构化表示将文本填入模板。</li>
+<li>定义：将特定信息识别、分别、放入到对应的类别中。（三个步骤）</li>
+</ul>
+</li>
+<li><p>会议：MUC、ACE、TAC</p>
+</li>
+<li><p>命名实体</p>
+<ul>
+<li>文本中有名字的尸体</li>
+<li>关系 词之间的关系 上海交通大学（三词变一词）</li>
+<li>事件 实体之间的状态转换</li>
+<li>语言学mention：现实世界中的关系或事件</li>
+<li>语言学实体：代表同一事物的全部实体</li>
+</ul>
+</li>
+<li><p>识别</p>
+<ul>
+<li><p>认知实体、关系与事件的过程。</p>
+</li>
+<li><p>识别语言学实体的含义</p>
+<p>-各种复合词</p>
+<p>-只有人能理解的缩写 DNA</p>
+<p>-人可以通过语义理解的复杂词汇</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/posts/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E7%A1%80.assets/image-20220920083234034.png" alt="image-20220920083234034"></p>
+<p><img src="/images/posts/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E7%A1%80.assets/image-20220920083739932.png" alt="image-20220920083739932"></p>
+<p>整个过程:训练、部署、介入外部数据</p>
+<p>知识工程方法：有人来建立数据库</p>
+<p>自动学习方法：训练模型后对数据进行训练。</p>
+<p>统计学习的使用：</p>
+<ul>
+<li>强调模型的可解释性（机器学习强调模型的可预测性）</li>
+<li>可使用混合方法</li>
+</ul>
+<p>信息抽取的评估方法</p>
+<ul>
+<li>自身评测<ul>
+<li>与专家测试集结果进行比较</li>
+</ul>
+</li>
+<li>外部评测</li>
+</ul>
+<p>NLP步骤</p>
+<ul>
+<li>分词 乒乓球拍卖完了</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/20/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E7%A1%80/" data-id="cl93g2ige000518ulb1moflr1" data-title="信息抽取 概念与基础" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-果树学-水果贸易" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/19/%E6%9E%9C%E6%A0%91%E5%AD%A6-%E6%B0%B4%E6%9E%9C%E8%B4%B8%E6%98%93/" class="article-date">
+  <time class="dt-published" datetime="2022-09-19T06:01:52.000Z" itemprop="datePublished">2022-09-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/19/%E6%9E%9C%E6%A0%91%E5%AD%A6-%E6%B0%B4%E6%9E%9C%E8%B4%B8%E6%98%93/">果树学 水果贸易</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/posts/%E6%9E%9C%E6%A0%91%E5%AD%A6-%E6%B0%B4%E6%9E%9C%E8%B4%B8%E6%98%93.assets/image-20220919140239657.png" alt="image-20220919140239657"></p>
+<p>香蕉：大宗国际贸易产品 </p>
+<ul>
+<li><p>主要产地：亚洲菲律宾（东亚）中美洲供给欧洲北美俄罗斯 </p>
+</li>
+<li><p>主要进口：欧洲 北美 俄罗斯</p>
+</li>
+<li><p>描述香蕉在国际政治事件中的描述 最经典的是沦为买办政府的洪都拉斯等中美国家</p>
+</li>
+</ul>
+<p>苹果</p>
+<ul>
+<li>主要产地：中国 南美 供给 欧洲 南美</li>
+</ul>
+<p>葡萄</p>
+<ul>
+<li>主要产地：欧洲 中国 澳洲 美国</li>
+</ul>
+<p>柑橘</p>
+<ul>
+<li>主要产地：南非，巴西，中国（自产自销）</li>
+<li>主要进口：中亚</li>
+</ul>
+<p>中国整体上进口水果多于出口水果。</p>
+<p><img src="/images/posts/%E6%9E%9C%E6%A0%91%E5%AD%A6-%E6%B0%B4%E6%9E%9C%E8%B4%B8%E6%98%93.assets/image-20220919141141238.png" alt="image-20220919141141238"></p>
+<p>环太平洋经济组织：对中国水果出口优位，东南亚与中国水果出口的互补性较强。</p>
+<p>水果贸易对象的选择：区位特点 互补性</p>
+<p>柑橘的出口：</p>
+<ul>
+<li>上海是中国最北边的柑橘生产地</li>
+<li>香港作为港口在统计上作为进口表示 </li>
+<li>中国的柑橘进口来自埃及，南非 澳洲 西班牙 美国</li>
+</ul>
+<p>车厘子</p>
+<ul>
+<li>主要出口国：智利 美国</li>
+</ul>
+<p>日本的水果销售呈现出具有购买力的青年阶层消费水果较少而幼年与老年对水果的消费较多。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/19/%E6%9E%9C%E6%A0%91%E5%AD%A6-%E6%B0%B4%E6%9E%9C%E8%B4%B8%E6%98%93/" data-id="cl93g2igq000a18ul8argbgs5" data-title="果树学 水果贸易" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-日记-2022-09-18" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/09/18/%E6%97%A5%E8%AE%B0-2022-09-18/" class="article-date">
@@ -378,123 +846,11 @@
 
 
   
-    <article id="post-酷女人第一弹！" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/12/%E9%85%B7%E5%A5%B3%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%BC%B9%EF%BC%81/" class="article-date">
-  <time class="dt-published" datetime="2022-09-12T11:06:37.000Z" itemprop="datePublished">2022-09-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/12/%E9%85%B7%E5%A5%B3%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%BC%B9%EF%BC%81/">酷女人第一弹！</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>东方刚欲异闻在今年上半年宣布了将于暑期退出NS版并添加了道具路线与饕餮尤魔个人路线的消息。对于为刚欲异闻本体略显单薄的路线数感到可惜的玩家们来说，NS版惯例的路线追加提供了一次体验更全面剧情的机会。</p>
-<p>而本作最终BOSS饕餮尤魔，在经历鬼形兽摸鱼，刚欲异闻延迟推出等一串蹲坑事件后终于迎来了格斗作惯例的个人路线。</p>
-<p>承接重量级整数作东方鬼形兽，由前一部作品的黑幕摩多罗隐岐奈一手引导，揭晓鬼形兽中刚欲同盟总长，饕餮的动物灵饕餮尤魔神秘消失的原因，并为更具现实气息的东方虹龙洞做铺垫，本作相比其他格斗作在剧情上与主线的联系更加紧密，可以猜测在鬼形兽甚至是天空璋时期就已经做好了剧情规划。出色的剧情安排与美术风格让我迷上了这一部东方作品，给了我深挖剧情的动力。</p>
-<p>石油异变是一场牵扯到人妖鬼神，波及幻想乡全境的重量级异变，黄昏边境在宣传这部作品时使用了以前从没用过的形容，“灾难性”。剧情中也出现了知道血池地狱真相的命莲寺为了及时封印血池地狱在不知会幻想乡其余势力的情况下凿穿三途川的情节，从一个侧面反映了本次异变的严重性。</p>
-<p>这次异变的黑幕，正是在明白石油的危险性，了解饕餮尤魔无法被常规手段击败，甚至已经想好饕餮尤魔对策的情况下满怀热情地投入到将真身是旧血池地狱的血液的石油引向地表的事业中，成功地整出了一般神整不出的节目效果。</p>
-<p>轮椅战神，新世代锅王，究极的绝对乐子秘神，强势登场后存在感极强的摩多罗隐岐奈是这场异变毋庸置疑是这场异变的绝对主角。</p>
-<p>相比谜语人八云紫跟正经人茨木华扇，唯我独尊的摩多罗很明显更为强势，个人风格更强，我在写文稿的过程中也几次三番的沉浸在对这位秘神的狂热崇拜中，回过神来的时候已经离题万里，纸上都是赞美之词，就像是身处在狂欲之海中的饕餮尤魔，喝高了让人狂热的石油，如秘神背后的童子一般失去了理智。抛开行为深处的逻辑不提，这也是个让人恨不起来的角色。</p>
-<p>但是刚欲异闻真的只是摩多罗一个人的操线起舞吗？这样的想法未免有些过于傲慢，站在狂热信徒的角度来看或许如此。过去有幻想乡不过是紫的金鱼缸的说法，如今有摩多罗的万年黑幕，幻想乡的的平衡似乎永远都是建立在某种绝对力量（BBA）之后。从最近的作品比如在人里开设妖怪酒馆、座敷童子实现远程办公的醉蝶华，妖怪大佬纷纷白给的智灵奇传，以及茨歌仙最经典的守矢，河童与天狗三方共建缆车桥段都可以看出，幻想乡之间的各个势力正在有机的结合在一起，而不再是梦月抄中简单的必要关系与宗教战争那种直白的对立关系。有别于过去的互相遏制，一种全新的平衡正在到来。刚欲异闻中的八坂神奈子就是一个例子，线路结尾的洩矢诹访子也是威严满满，本作的守矢势可以说是神德充沛。</p>
-<p>故事回到一切的最开始，自机们在畜生界被各路大佬暴打的时候，临阵摸鱼的饕餮尤魔离开了畜生界，并通过某种手段到达了位于旧地狱深处的旧血池地狱。现有的剧情里并没有直接讲明因为过于可怕被地狱管理者们封印的旧血池地狱是如何解开了封印。摩多罗发现了旧血池地狱封印被破除，贪求着石油力量的饕餮盘踞在地底，并因为自身的能力逐渐受到石油中的诅咒影响。为了处理这一问题将石油引导了地上，揭开了石油异变的序章。</p>
-<p>在全部势力中最早行动的是与地底有着深刻渊源的命莲寺，过去曾被封印在地底的圣辇船妖怪们从一开始就知道石油的真面目，认为封印旧血池地狱刻不容缓，到达旧地狱最深处需要穿过高温的旧灼热地狱，在圣的授意下村纱水蜜凿穿了三途川，试图用无量之水冷却旧灼热地狱，这也是标题中被水淹没的沉愁地狱的由来。这一行为同时影响了守矢的核融合炉与地狱方面，由于事态紧急并未事先通知。</p>
-<p>三途川泛滥的河水开始向地底涌去的同时，由于石油涌出造成的核融合炉故障惊动了守矢神社的山神八坂神奈子，风神亲自赶往地底掌控事态，而靠着石油大发了一笔的依神姐妹这个时候或许正在旧地狱温泉大闹。各条线路并非平行世界而是同一个事件的不同侧面，刚欲异闻这种与以往格斗作不同的叙事方式让复盘这场异变的过程变得很有趣。</p>
-<p>人类方面站出来的自然还是红白黑白两只自机，两条路线有一定程度的并行关系。刚刚到达魔法森林的她们对于到底发生了什么可以说是完全不了解，只是凭着正常的思路向着地底进行探查，两人打了打意思意思，算是为进入地底热身，魔理沙在此之后恰好碰上了正在赶往地底的船长，两人进行了友好的谜语人交流之后先后穿过地灵虹洞。在这里的时间顺序大概是灵梦、魔理沙、神奈子、船长，这一点可以用神奈子投喂因魔理沙不能吃而饿肚子的山女与小伞见到船长证实自己跟灵梦所说的猜测来证明。</p>
-<p>呆在地灵虹洞的小伞跟山女也是在本次异变中十分有趣的角色，小妖怪小伞想要得到一点石油，而地底的土蜘蛛妖怪山女却知道石油的真面目并感到危险，并在石油再次喷发后颇具深意地说出盖上盖子对旧血池地狱是不起作用的。小妖怪因为石油的力量而欢喜，知晓石油真面目的妖怪断言过去封印旧血池地狱的做法是治标不治本，这两种对于石油的态度也很有趣。</p>
-<p>正式进入地底后的第一层是旧地狱温泉，关键人物是以总管身份华丽登场的星熊勇仪。知晓石油真相的鬼王在面对前来调查石油的人类，靠石油赚来的财富大肆挥霍的依神姐妹表现出了不同的态度。</p>
-<p>面对略有些下头的暴发户依神姐妹，鬼王没有点出为她们带来财富的正是包含诅咒的石油，而是招待了她们，不过没有也接受这对姐妹包场的要求。而对于提出调查的人类，勇仪在不透漏石油的真面目的情况下说明了石油的危险性，以鬼的风格大闹了一场之后放行了自机，告诫人类不可将旧地狱的秘密外传。知晓石油的危险，却不反感使用石油赚来的金钱的依神姐妹。一面说旧血池地狱对于旧地狱是绝密，另一面却又不断透露有关石油的信息，败北后爽快的指明前往石油之海的道路。石油在温泉喷发之后也只是吃了一惊，与芙兰交手之后就又恢复了常态，来者不拒，去者不留，说着混沌即安泰的鬼王似乎只是希望与来者交手，究竟是单纯的粗神经还是有着更深的考量。在饕餮路线中我们应该能够看到更有趣的描述。</p>
-<p>在船长还在与赖在温泉街不走的依神姐妹拉扯的时候，灵梦与神奈子在核融合炉爽快地打了一架。由石油穿过旧地狱到达地面察觉到事件可能有内情的风神试图将灵梦赶回地面，可惜灵梦并不买账。解开误会后，灵梦继续向地底深入并穿过了灼热地狱，而神奈子去确认旧地狱是否有石油喷发。</p>
-<p>也就是在这个时间点，无穷无尽的三途川之水淹没了灼热地狱。</p>
-<p>从旧灼热地狱复燃的时间点来看，只有灵梦穿过的是还不曾熄灭的灼热地狱，其他角色到达石油之海的时间可能都在灵梦之后，在与饕餮交战的时间遥遥领先其他可用角色，很有可能在其他人还没下到石油之海的时候就已经被饕餮送回地上。剩下的人当中神奈子与魔理沙是在旧灼热地狱熄灭的时间段通过旧灼热地狱，依神姐妹与船长都是在旧灼热地狱复燃之后才通过，依神姐妹后来又碰上了刚刚与饕餮达成协议的神奈子，还被摩多罗用门带到了红魔馆。按照对战顺序，可以猜测时间上到达石油之海的顺序为灵梦、魔理沙、神奈子、依神姐妹、船长，与饕餮的对战顺序则是灵梦、魔理沙、神奈子、船长、依神姐妹。</p>
-<p>把守着旧灼热地狱的是继承了八咫乌之力的地狱鸦，灵乌路空，而在旧灼热地狱熄灭期间登场的则是自三途川而来的二羽渡神庭渡久侘歌，两位鸟脑袋都是很清爽的角色，只是在清理融合炉中异物的阿空虽然知道地底有很危险的生物，但是并没有什么兴趣，认真地进行着污染物的清除。久侘歌作为地狱口岸的管理者前来调查三途川所发生的事故，却并没有碰上凿穿三途川的真犯人船长，与神奈子短暂的交手后听闻她要前往地底调查，努力阻止未果。这里我们也能看出来，地狱的管理者们知道旧血池地狱的存在并把进入旧血池地狱认定为危险举动，但是新来到地底的年轻妖怪有可能不知道。或许是着急离开即将复燃的旧灼热地狱，俗气的依神姐妹并没有引起二羽渡神过多注意。在芙兰朵露的路线中我们看到二羽渡神站在本应复燃的旧灼热地狱中，望着三途河水所流向的地狱深处，感叹连废墟中残存的仇怨都要抹除的无情。为什么她要为这颗被抹掉的定时炸弹感叹呢？这一点也引人深思。</p>
-<p>灵梦路线对坠落进入石油之海的过程做了比较详细的描述。</p>
-<p>在黑暗中不断下坠，双脚落在地面上时发现自己已经身处无边的石油海中，耳边回响着恶毒的歌谣：“一掘为了钱财，二掘为了国家，三掘为了憎恨”，寻声望去，迎上来的是一双血红的眼睛，还有诡异的笑容。浸在黑色的原油里，面前的白发妖怪透漏着狂气，让人有一种窒息的感觉。</p>
-<p>这一作的人物服饰都很有特色，给人印象最深的应该是勇仪跟船长，依神姐妹的穿搭则参考了说到石油与金钱就绝对绕不开的中东石油王，配合中东风的改编曲更是令人两眼一黑。原创角色饕餮尤魔本体是尖耳白毛红瞳萝莉，羊角与服饰很明显地参考了兽面纹。另外耳环，尖牙，方形的眼瞳跟与娇小的身体呈现出反差的大勺子也是萌点，最重要的一点是什么呢，她是个正经露肩角色，一个不穿袖筒的露肩角色，头上还有蝴蝶结，真的太棒了，一伯分。</p>
-<p>对异变的真相了解不足，也无法处理石油的人类们无法成为这次异变的解决者。</p>
-<p>对于没见识到石油之海真面目的人类来说，做客此地的饕餮尤魔就足以造成很深的心理创伤，白给的主角组被挥舞着勺子的神秘妖怪借着上升的气流送回地面的间歇泉。鬼形兽中就见识到畜生可怕的自机二人，灵梦对没能完全解决的异变真相一头雾水，被饕餮尤魔边狂笑边采掘石油的狂气景象震撼的沙沙则产生了畜生PTSD。芙兰C路线中出现在石油之海的灵梦再次返回地底并与饕餮交战，这一点给了我些许的希望，实装的道具路线大概率是steam版中无法选择的刚欲挑战模式，不过也存在补上这条灵梦重回地底的线路的可能，毕竟在道具选择画面中出现了一直隐藏在幕后的摩多罗。失落，犹豫的灵梦在与芙兰的对战中找回了自我，猜出了吸收了自己攻击的饕餮并不是让石油喷出的犯人，恍惚中察觉到这场异变似乎另有隐情，可惜人类们的故事就此落幕了。</p>
-<p>不同于人类，拥有强大力量，在与饕餮的战斗中知晓了血池地狱真相的妖怪与神明们又是怎样的呢？</p>
-<p>山神八坂神奈子，想要管理石油。在灵梦面前说自己没去过旧血池地狱，实际上却是在向灵梦隐藏石油之海的真相，探求着石油的畜生让她想起了外界，正如诹访子所说，燃烧本是生物的石油受到诅咒是无法避免的，而面对苏醒的旧血池地狱只有委托不断探求着石油的饕餮才能处理掉，因此她选择了与饕餮尤魔签订秘密契约来管理石油。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/12/%E9%85%B7%E5%A5%B3%E4%BA%BA%E7%AC%AC%E4%B8%80%E5%BC%B9%EF%BC%81/" data-id="cl93g2ihf000j18ul664d7hac" data-title="酷女人第一弹！" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-蘇格拉底" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/12/%E8%98%87%E6%A0%BC%E6%8B%89%E5%BA%95/" class="article-date">
-  <time class="dt-published" datetime="2022-09-12T11:00:25.000Z" itemprop="datePublished">2022-09-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/12/%E8%98%87%E6%A0%BC%E6%8B%89%E5%BA%95/">蘇格拉底</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><strong>我唯一知道的一件事，就是我一無所知</strong></p>
-<p>這句話來自古希臘的蘇格拉底，又被他的學生柏拉圖傳下來。成爲蘇格拉底智慧的象徵。當然，這句惡化也有可能來自柏拉圖或者是其他蘇格拉底學生的杜撰，用來稟明蘇格拉底學派的研究品格。歷史與世界的真相，似乎是人的精神本質之外的事。但是要探明世界的運行機制，又怎能不探明人的精神本身呢？</p>
-<p>這就是相對性精神學的源流，它旨在通過對人類精神&#x2F;思想形成的探究達成對世界本質的探究。是一門看起來高深，實際上卻很無趣的學問。在大多數情況下這一探究的成果往往只是研究者的胡言亂語。</p>
-<p>最開始的研究將人複雜的行爲與思想本身闡釋為一種或幾種簡單的原始衝動隨時間的積纍在身體複雜的機構作用下的表現。但是這種原始衝動又是從何而來的呢？這些理論往往把這種本源性的衝動定性爲人的本質，就如同反射一般。尋找到對應這種衝動的物理器官，是這種學説與現實的交錯點。很可惜，儘管現代科學對於人體的研究有了長足的發展，卻沒能得出肯定的結論。</p>
-<p>對人的意識本身進行分層的嘗試同樣備受重視。人的意識是存在分層的，最簡單的證明就是大多數人認爲是自己意識的心中低語。潛意識是在這個領域研究的明星，與肉體本身高度的關聯性，與行爲與大腦的關聯性為研究提供了一個很好的途徑。研究者們試圖從潛意識入手來研究外界與人體本身的某種特質的協作對人體意識的影響。</p>
-<p>闡釋人意識的本質，在筆者看來，這一事件本身是不可能的。</p>
-<p>正如同篤信世界是自己想象出來的孩子一般，用長時間受到自己理論熏陶的大腦來撰寫闡述自己理論的文獻，這一行爲本身就封鎖在名爲自我的箱庭之中。坐在同一間咖啡廳裏，坐在卓對面的人很可能有著與你完全不同的思想機構，但你們兩人都是經過了通過電子門，與服務員對話，尋找座位才坐到了彼此的身邊，這説明你們兩人起碼在人類社會的訓練下學會了一些特定的行動模式。同理，由於先天性的大腦障礙導致失明，失聲的少年少女經過努力同樣也能融入社會，也有在事故中經歷大腦損傷的人重歸社會的例子。那麽是否可以說并不是一個完整的大腦，而是大腦的某一部分或者是某種確定的原理使得這些大腦結構并不相同的人擁有相同的行爲模式呢？</p>
-<p>這祇是一個探討性的見解。或許我們可以從最簡單的反饋中找到答案。</p>
-<p>厠所裏的抽水馬桶，水缸中的水位會自己保持在一個相對位置，少的時候進水閥門會打開，到達目標附近就會停下。森林中的動植物在進行激烈的生存競爭之後也會達到平衡狀態。這些學問的統稱，叫做控制論。筆者想要證明的是，意識這種東西，是在人類肉體的基礎上，在適用於整個世界的控制論基礎原理下自然發展產生的結果。</p>
-<p>不過在此之前，筆者首先先討論一下抽象的概念。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/12/%E8%98%87%E6%A0%BC%E6%8B%89%E5%BA%95/" data-id="cl93g2igv000b18ul07qwaikq" data-title="蘇格拉底" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -513,7 +869,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
     </div>
   </div>
 
@@ -526,23 +882,23 @@
       <ul>
         
           <li>
-            <a href="/2022/10/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-10%E6%9C%8827%E6%97%A5/">人工智能 10月27日</a>
+            <a href="/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/">计算机网络复习</a>
           </li>
         
           <li>
-            <a href="/2022/10/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-10%E6%9C%8826%E6%97%A5/">计算机图形学 10月26日</a>
+            <a href="/2022/11/08/%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%BB%BB%E5%8A%A1/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2022/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/">计算机网络 不知道</a>
+            <a href="/2022/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2022/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%A4%8D%E4%B9%A0/">计算机图形学 复习</a>
+            <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/">信息抽取 观点抽取</a>
           </li>
         
           <li>
-            <a href="/2022/10/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%AC%AC%E4%BA%94%E5%91%A8/">计算机图形学 第五周</a>
+            <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E8%A7%82%E7%82%B9%E6%8A%BD%E5%8F%96/">信息抽取 关系抽取</a>
           </li>
         
       </ul>

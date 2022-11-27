@@ -71,6 +71,444 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-计算机网络复习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/" class="article-date">
+  <time class="dt-published" datetime="2022-11-27T04:54:48.000Z" itemprop="datePublished">2022-11-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/">计算机网络复习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h1 id="第一章：计算机网络"><a href="#第一章：计算机网络" class="headerlink" title="第一章：计算机网络"></a>第一章：计算机网络</h1><p><img src="/../images/posts/image-20221127144932267.png" alt="image-20221127144932267"></p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><p><img src="/../images/posts/image-20221127130318974.png" alt="image-20221127130318974"></p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>分散的独立计算机系统通过通信设备与线路进行连接后由完善软件实现资源共享与信息传递。</p>
+<p>其中连接部分为拓扑结构，而之后的内容由软件或协议完成。</p>
+<p>互连自治的计算机集合。（自治实际存疑，无主从关系）</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>数据通信、资源共享</p>
+<p>分布式处理、提高可靠性 （多路）负载均衡（共同完成任务）</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><h4 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h4><p>硬件</p>
+<p>软件</p>
+<p>协议：规则集合</p>
+<h4 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h4><p>边缘部分：用户可直接使用的终端 </p>
+<ul>
+<li>C&#x2F;S 服务器方式</li>
+<li>P2P方式</li>
+</ul>
+<p>核心部分：如路由器等服务中断</p>
+<h4 id="功能组成"><a href="#功能组成" class="headerlink" title="功能组成"></a>功能组成</h4><p>通信子网：实现通信</p>
+<p>资源子网：实现资源共享</p>
+<p><img src="/../images/posts/image-20221127125910739.png" alt="image-20221127125910739"></p>
+<p>传输层算是中间夹着那一层，资源子网实现信息生成 ，后者实现传递</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li><p>按分布范围 ：广域网WAN 交换技术 城域网 局域网WAN（广播技术） 个人区域网PAN</p>
+</li>
+<li><p>按使用者</p>
+<ul>
+<li>公用网</li>
+<li>专用网</li>
+</ul>
+</li>
+<li><p>按交换技术</p>
+<ul>
+<li>电路</li>
+<li>报文</li>
+<li>分组</li>
+</ul>
+</li>
+<li><p>按拓扑结构</p>
+<ul>
+<li>总线型</li>
+<li>星型</li>
+<li>环形</li>
+<li>网状型</li>
+</ul>
+</li>
+<li><p>按传播技术</p>
+<ul>
+<li>广播式网络：共享公共通信信道</li>
+<li>点对点网络：分组存储 路由转发</li>
+</ul>
+</li>
+</ul>
+<h2 id="标准化工作与相关组织"><a href="#标准化工作与相关组织" class="headerlink" title="标准化工作与相关组织"></a>标准化工作与相关组织</h2><p><img src="/../images/posts/image-20221127130931571.png" alt="image-20221127130931571"></p>
+<h3 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h3><p>要实现不同厂商软硬件的相互连通 要遵守相应的标准</p>
+<ul>
+<li>法定标准 （OSI）</li>
+<li>事实标准：主流变成约定 （TCP&#x2F;IP）大卡变成小卡</li>
+</ul>
+<p>标准的制定</p>
+<h5 id="RFC（请求评论）到因特网标准）"><a href="#RFC（请求评论）到因特网标准）" class="headerlink" title="RFC（请求评论）到因特网标准）"></a>RFC（请求评论）到因特网标准）</h5><ul>
+<li>因特网草案提交到rfc编辑</li>
+<li>建议标准 rfc文档</li>
+<li>草案标准</li>
+<li>因特网标准成立</li>
+</ul>
+<h4 id="相关组织"><a href="#相关组织" class="headerlink" title="相关组织"></a>相关组织</h4><ul>
+<li>标准化组织ISO</li>
+<li>电信联盟 ITU</li>
+<li>电子电气工程师学会 IEEE （IEEE802 5G）</li>
+<li>因特网工程组  IETF</li>
+</ul>
+<h2 id="速率-带宽-吞吐量-时延-时延带宽积-RTT-利用率"><a href="#速率-带宽-吞吐量-时延-时延带宽积-RTT-利用率" class="headerlink" title="速率 带宽 吞吐量 时延 时延带宽积 RTT 利用率"></a>速率 带宽 吞吐量 时延 时延带宽积 RTT 利用率</h2><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><p>数据率 数据传输率 比特率</p>
+<p>比特：1&#x2F;0</p>
+<p>连接在网络上的主句在信道上发送数据位数的速率。</p>
+<p><img src="/../images/posts/image-20221127131136711.png" alt="image-20221127131136711"></p>
+<p>一字节为八个比特。</p>
+<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><p>原本只某个信号能占用的频带宽度。在链路入口发送数据的速率</p>
+<p>在计算机网络中表示两点之间的最高数据率。（网络设备支持的最高速度）</p>
+<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4><p>在单位时间内通过某个信道的数据量</p>
+<p>收到网络带宽跟限定速率（服务器能力本身也有限制）的限制。</p>
+<p><img src="/../images/posts/image-20221127132055438.png" alt="image-20221127132055438"></p>
+<h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><p>数据 从网络 一段传送到另一端使用的事件</p>
+<ul>
+<li>发送时延 从开始到最后一个比特发送完毕用时 <img src="/../images/posts/image-20221127132352807.png" alt="image-20221127132352807"></li>
+<li>传播时延 链路上传播一定长度用时，与电磁波实际速度与链路长度有关 2 10 *8次方米每秒。<img src="/../images/posts/image-20221127132454497.png" alt="image-20221127132454497"></li>
+<li>排队时延 等待输出、输入链路可用 在交换区对链路上传来的数据进行处理的时延</li>
+<li>处理时延 检错 找出口。</li>
+</ul>
+<p>高速链路在发送时延</p>
+<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><p>时延带宽积 &#x3D; 传播时延$\times$带宽 代表以比特位单位的链路长度 代表着链路中此时此刻的比特两</p>
+<h3 id="RTT"><a href="#RTT" class="headerlink" title="RTT"></a>RTT</h3><p>往返时延：从发送方发送数据开始 到发送方收到接受方的确认为止经历的时延。（PING）</p>
+<p>RTT越大 在收到确认之前可发送的数据越多。</p>
+<p>RTT包括</p>
+<ul>
+<li>往返传播时延（*2）</li>
+<li>对方处理的事件</li>
+<li>不包括上信道的时间</li>
+</ul>
+<h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><ul>
+<li>信道利用率 ：通信链路被完全使用</li>
+<li>网络利用率：信道利用率加权平均值（一直占满RTT增大）反而会下降</li>
+</ul>
+<p><img src="/../images/posts/image-20221127133316753.png" alt="image-20221127133316753"></p>
+<h2 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h2><p><img src="/../images/posts/image-20221127135407617.png" alt="image-20221127135407617"></p>
+<p>发送一份文件</p>
+<ul>
+<li>对通信链路进行激活</li>
+<li>告诉网络如何识别目的主机</li>
+<li>确认对面主机是否做好准备</li>
+<li>做好意外处置工作</li>
+</ul>
+<p>将问题进行分层处理包装</p>
+<p><img src="/../images/posts/image-20221127134442453.png" alt="image-20221127134442453"></p>
+<p>实体- 每一层当中的活动元素回味对等实体 如酒瓶棉花。</p>
+<p>协议 对等实体之间进行的关系架构 有语法 语义 同步等</p>
+<p>接口 没两层之间的关节位置</p>
+<p>服务 下级为上级进行服务 先装箱 后运输。</p>
+<h3 id="如何分层？"><a href="#如何分层？" class="headerlink" title="如何分层？"></a>如何分层？</h3><p>各层之间最好相对杜梨 相互交流仅靠接口完成 分层的时候结构上可进行分割。</p>
+<p>保持下层对上层独立性 上层单项使用下层提供服务 整个结构支持标准化工作。</p>
+<h3 id="分层结构-1"><a href="#分层结构-1" class="headerlink" title="分层结构"></a>分层结构</h3><p><img src="/../images/posts/image-20221127134951132.png" alt="image-20221127134951132"></p>
+<p>把三层同时抽出来</p>
+<p><img src="/../images/posts/image-20221127135100034.png" alt="image-20221127135100034"></p>
+<p>每一层在前面疯狂的加PCI。</p>
+<p><img src="/../images/posts/image-20221127135350205.png" alt="image-20221127135350205"></p>
+<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><p>7层OSI 4层TCP&#x2F;IP（后者式实际使用中使用的标准）</p>
+<p>之后还有五层的体系结构</p>
+<h3 id="体系结构的历史"><a href="#体系结构的历史" class="headerlink" title="体系结构的历史"></a>体系结构的历史</h3><p>只有相同产品才能进行的相同通信。发展到TCP&#x2F;IP等情况。OSI的理论很成功 但是市场很失败。</p>
+<p><img src="/../images/posts/image-20221127141159810.png" alt="image-20221127141159810"></p>
+<p><img src="/../images/posts/image-20221127141951673.png" alt="image-20221127141951673"></p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>所有与用户进行交互并产生网络流量的程序。</p>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><p>用于处理两个通信系统中交换信息的表示方式</p>
+<ul>
+<li>数据格式变换。</li>
+<li>对数据进行加密解密。</li>
+<li>数据的压缩与数据的恢复。</li>
+</ul>
+<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><ul>
+<li><p>向表层用户实体进程提供建立连接并在连接上有序地传输数据</p>
+<ul>
+<li><p>是会话，也是建立同步（SYN）</p>
+</li>
+<li><p>功能</p>
+<ul>
+<li>建立管理 终止会话</li>
+<li>建立校验点以保证可从校验点恢复通信。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>资源子网与通信子网接口 上层端到端（只有起点与终点） 下层点到点。</p>
+<p>负责主机中两个进程之间地通信 为端到端 传输单位为报文段或用户数据包</p>
+<ul>
+<li>可靠传输确认、执行不需要大量确认机制的不可靠传输</li>
+<li>差错控制</li>
+<li>流量控制</li>
+<li>复用分用 多个进程同时使用服务，将收到的信息分别交给相应的进程。</li>
+</ul>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>将某个信息分组从源端传送到目的端，为分组交换网上的不同主机提供通信服务。 传输段位为数据报</p>
+<ul>
+<li>路由选择 选择目前最优拓扑路径</li>
+<li>流量控制 限制发送方</li>
+<li>差错控制</li>
+<li>拥塞控制 现实整体网路情况。</li>
+</ul>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><p>主要任务是把数据包组成帧。数据链路层传输单位为帧。</p>
+<ul>
+<li>成帧：制作一个帧</li>
+<li>差错控制 检查与纠正</li>
+<li>流量控制 确认缓存</li>
+<li>对信道的访问控制 （访问控制）</li>
+</ul>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>物理媒体上实现比特流的透明传输(不论数据类型均可传输) 传输单位为比特。</p>
+<ul>
+<li>定义接口</li>
+<li>定义传输模式</li>
+<li>定义传输速率</li>
+<li>比特的同步</li>
+<li>比特的编码。</li>
+</ul>
+<h2 id="TCP-x2F-IP-四层模型-与五层模型"><a href="#TCP-x2F-IP-四层模型-与五层模型" class="headerlink" title="TCP&#x2F;IP 四层模型 与五层模型"></a>TCP&#x2F;IP 四层模型 与五层模型</h2><p><img src="/../images/posts/image-20221127144147689.png" alt="image-20221127144147689"></p>
+<ul>
+<li>都基于独立的协议栈</li>
+<li>适用于所有厂家的产品</li>
+</ul>
+<p>不同：</p>
+<ul>
+<li>OSI不针对特定协议</li>
+<li>TCP&#x2F;IP是针对IP进行设计的，网络层侧重无连接形式。</li>
+<li><img src="/../images/posts/image-20221127144453236.png" alt="image-20221127144453236"></li>
+</ul>
+<h3 id="抽象出的五层参考模型"><a href="#抽象出的五层参考模型" class="headerlink" title="抽象出的五层参考模型"></a>抽象出的五层参考模型</h3><p><img src="/../images/posts/image-20221127144721667.png" alt="image-20221127144721667"></p>
+<h1 id="第二章-：物理层"><a href="#第二章-：物理层" class="headerlink" title="第二章 ：物理层"></a>第二章 ：物理层</h1><ul>
+<li>通信基础</li>
+<li>两个公式（求极限传输速率）</li>
+<li>看波形图判断信号</li>
+<li>传输介质</li>
+<li>物理层设备</li>
+</ul>
+<h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><p>如何在链接各种计算机的传输媒体上传输数据比特流 不是具体的传输媒体。</p>
+<p>确定与传输媒体接口有关的一些特性（定义标准）</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>机械特性 定义物理连接的特性 规格 接口形状 引线引脚数量</li>
+<li>电气特性 传输二进制位时的电压范围与距离限制。</li>
+<li>功能特性 物理数据的具体含义</li>
+<li>规范特性 工作顺序与具体含义</li>
+</ul>
+<h2 id="数据通信基础知识"><a href="#数据通信基础知识" class="headerlink" title="数据通信基础知识"></a>数据通信基础知识</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/" data-id="claz1prar00038culblko7j4v" data-title="计算机网络复习" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-主机配置任务" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/08/%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%BB%BB%E5%8A%A1/" class="article-date">
+  <time class="dt-published" datetime="2022-11-08T13:03:14.564Z" itemprop="datePublished">2022-11-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="主机配置任务"><a href="#主机配置任务" class="headerlink" title="主机配置任务"></a>主机配置任务</h1><ul>
+<li>分配内存</li>
+<li>配装项目（novelAI）</li>
+<li>建立文件库</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/11/08/%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%BB%BB%E5%8A%A1/" data-id="claz1pral00028cul8dtacbvg" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-计算机网络实验" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/" class="article-date">
+  <time class="dt-published" datetime="2022-11-08T07:43:26.716Z" itemprop="datePublished">2022-11-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="计算机网络实验"><a href="#计算机网络实验" class="headerlink" title="计算机网络实验"></a>计算机网络实验</h1><p>图片解码类型的可见光通信加密。</p>
+<p>思路：</p>
+<p>主要以python为工具进行构筑实现。</p>
+<p>基础构建是编码-传输-解码三个过程</p>
+<p>编码使用二维码生成视频</p>
+<p>传输使用手机摄像头</p>
+<p>解码方式为pyzbar进行二维码识别。</p>
+<p>目标是实现文章或者图片的传输。</p>
+<ul>
+<li><p>应用场景一时半会想不出来，比较重要的一点是可见。</p>
+</li>
+<li><p>汽车之间通信的可见光项目。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/" data-id="claz1prau00048cul8flz749a" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-信息抽取-关系抽取" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/" class="article-date">
+  <time class="dt-published" datetime="2022-11-08T00:08:36.000Z" itemprop="datePublished">2022-11-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/">信息抽取 观点抽取</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="C:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20221108081115545.png" alt="image-20221108081115545"></p>
+<h1 id="观点抽取"><a href="#观点抽取" class="headerlink" title="观点抽取"></a>观点抽取</h1><p>包含着某种情感的定义句子。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li><p>是否明显 强烈</p>
+<ul>
+<li>直接对应（某方面怎么样）</li>
+<li>间接对应（例如从某个方面是怎么样入手描述）</li>
+</ul>
+</li>
+<li><p>两种类型</p>
+<ul>
+<li>通常句：“我吃了药之后病就好了”（正面）</li>
+<li>比较句：“相比XX更”</li>
+</ul>
+</li>
+</ul>
+<h2 id="观点抽取的物量"><a href="#观点抽取的物量" class="headerlink" title="观点抽取的物量"></a>观点抽取的物量</h2><ul>
+<li>object：对象</li>
+<li>feature：特征</li>
+<li>sentiment value：对这个feature的情感</li>
+<li>holder：评论者</li>
+<li>time：时间</li>
+</ul>
+<p><img src="C:\Users\surface\AppData\Roaming\Typora\typora-user-images\image-20221108082057022.png" alt="image-20221108082057022"></p>
+<h2 id="观点抽取的任务"><a href="#观点抽取的任务" class="headerlink" title="观点抽取的任务"></a>观点抽取的任务</h2><ul>
+<li>判断情感倾向</li>
+<li>判断情感浓烈程度</li>
+<li>判断链接</li>
+</ul>
+<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><ul>
+<li>短语</li>
+<li>描述词</li>
+<li>否定</li>
+<li>标志</li>
+</ul>
+<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><ul>
+<li><p>首先抽取形容词副词</p>
+</li>
+<li><p>计算情感极性（PMI）</p>
+<p>包含了两个东西的相关性以及感情倾向。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/" data-id="claz1pra100008culb44edktg" data-title="信息抽取 观点抽取" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-信息抽取-观点抽取" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E8%A7%82%E7%82%B9%E6%8A%BD%E5%8F%96/" class="article-date">
+  <time class="dt-published" datetime="2022-11-08T00:08:36.000Z" itemprop="datePublished">2022-11-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E8%A7%82%E7%82%B9%E6%8A%BD%E5%8F%96/">信息抽取 关系抽取</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E8%A7%82%E7%82%B9%E6%8A%BD%E5%8F%96/" data-id="claz1praf00018cul9svc1o8n" data-title="信息抽取 关系抽取" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-人工智能-10月27日" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/10/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-10%E6%9C%8827%E6%97%A5/" class="article-date">
@@ -812,6 +1250,20 @@
 <p>按照物体多少，每次选取一个维度进行二分，按照控件本身信息密度进行二分。</p>
 <h5 id="BSP树"><a href="#BSP树" class="headerlink" title="BSP树"></a>BSP树</h5><p>根据边界要进行多次划分，有可能将球体切开，所以现在很少用。</p>
 <p><img src="/../images/posts/image-20221102091336481.png" alt="image-20221102091336481"></p>
+<h2 id="言零七版-光线追踪"><a href="#言零七版-光线追踪" class="headerlink" title="言零七版 光线追踪"></a>言零七版 光线追踪</h2><p>光现在多次弹射后进入人眼的效果 就是光线追踪。</p>
+<p>光栅化是比较近似但是非常快的技术。</p>
+<h3 id="light-rays（光线）"><a href="#light-rays（光线）" class="headerlink" title="light rays（光线）"></a>light rays（光线）</h3><ul>
+<li>沿着直线传播</li>
+<li>两条光线不会发生合体</li>
+<li>光线由光源出发，最后到达人眼。<img src="/../images/posts/image-20221103203817424.png" alt="image-20221103203817424">光路可逆性</li>
+</ul>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>从光源出发</li>
+<li>从摄像机出发</li>
+</ul>
+<h3 id="Ray-Casting"><a href="#Ray-Casting" class="headerlink" title="Ray Casting"></a>Ray Casting</h3><p>顺着发出一道光，跟光源 连线 ，判断对光源是否可见，不在阴影里，说明跟光源搭上了。在相交处求法线继续向下找光源</p>
+<p><img src="/../images/posts/image-20221103204359426.png" alt="image-20221103204359426"></p>
+<h3 id="Whitted-光追"><a href="#Whitted-光追" class="headerlink" title="Whitted 光追"></a>Whitted 光追</h3><p>加入了交界面的不透明度，判断继续传播的方向。</p>
 
       
     </div>
@@ -874,351 +1326,11 @@
 
 
   
-    <article id="post-信息抽取" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/10/11/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/" class="article-date">
-  <time class="dt-published" datetime="2022-10-11T00:09:43.000Z" itemprop="datePublished">2022-10-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/10/11/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/">信息抽取</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="/../images/posts/image-20221011081051084.png" alt="image-20221011081051084"></p>
-<h1 id="信息抽取-命名实体"><a href="#信息抽取-命名实体" class="headerlink" title="信息抽取 命名实体"></a>信息抽取 命名实体</h1><p>主要是 名词</p>
-<h2 id="特征选择与特征表示"><a href="#特征选择与特征表示" class="headerlink" title="特征选择与特征表示"></a>特征选择与特征表示</h2><p>特征的选择、表示（基于规则）对机器学习而言首先要区分是否有效、并按照使用方式进行表示，</p>
-<h2 id="特征值类型"><a href="#特征值类型" class="headerlink" title="特征值类型"></a>特征值类型</h2><ul>
-<li>离散的（实数值）例如长度</li>
-<li>布尔值（只有两种结果）</li>
-<li>叙述词 进行描述的词汇（名词形容词）</li>
-<li>规模词（表示程度不同）</li>
-<li>特征值</li>
-</ul>
-<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><ul>
-<li><p>用大量的文本确定某些部件的实例。“be appoinented as”前为人名 后为职务</p>
-</li>
-<li><p>应用规则惊醒抽取</p>
-<p><img src="/../images/posts/image-20221011081913888.png" alt="image-20221011081913888"></p>
-</li>
-<li><p>出现问题后进行记录并纠正。</p>
-</li>
-</ul>
-<h3 id="问题类型"><a href="#问题类型" class="headerlink" title="问题类型"></a>问题类型</h3><ul>
-<li>太宽泛&#x2F;太限定</li>
-</ul>
-<h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><ul>
-<li>按照词性与概率进行处理</li>
-<li><img src="/../images/posts/image-20221011082514031.png" alt="image-20221011082514031"></li>
-<li>序列标注</li>
-</ul>
-<h2 id="CRF（文本标注方法之一）"><a href="#CRF（文本标注方法之一）" class="headerlink" title="CRF（文本标注方法之一）"></a>CRF（文本标注方法之一）</h2><p><img src="/../images/posts/image-20221011085921628.png" alt="image-20221011085921628"></p>
-<h2 id="10月25日-周二-NLP-序列标注"><a href="#10月25日-周二-NLP-序列标注" class="headerlink" title="10月25日 周二 NLP 序列标注"></a>10月25日 周二 NLP 序列标注</h2><p>输入信息流，输出标注过的信息流。BIESO</p>
-<p>双向RNN：整个网络的架构相同，但是分成很多节，（太阳的位置不同 影子不同）</p>
-<p>使用的时候可以从双向进行使用。</p>
-<h3 id="LSTM："><a href="#LSTM：" class="headerlink" title="LSTM："></a>LSTM：</h3><p>可以长时间保留学习数据，克服了梯度消失。</p>
-<p>LSTM+CRF：给定输入</p>
-<ul>
-<li>确定发射概率 状态h下给定x生成对应y的概率。（softmax）<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/105722023">一文详解Softmax函数 - 知乎 (zhihu.com)</a></li>
-<li>得出发射矩阵（算是个模型）</li>
-<li>综合打分：发射+转移</li>
-</ul>
-<p>attention（注意力机制）在存在decoder的情况下</p>
-<p>self-attention：不用某个具体标准，而是自己以自己进行比较产生相对差异。</p>
-<h1 id="11月1日-周二"><a href="#11月1日-周二" class="headerlink" title="11月1日 周二"></a>11月1日 周二</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/11/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/" data-id="cl99pd09p0000ccul3jfs2x3c" data-title="信息抽取" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-人工智能 CSP" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/10/11/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20CSP/" class="article-date">
-  <time class="dt-published" datetime="2022-10-11T00:07:37.863Z" itemprop="datePublished">2022-10-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>title: 神经网络与NLP<br>date: 2022-10-08 08:07:34<br>tags:</p>
-</blockquote>
-<h1 id="CSP（约束满足问题）"><a href="#CSP（约束满足问题）" class="headerlink" title="CSP（约束满足问题）"></a>CSP（约束满足问题）</h1><p><img src="/../images/posts/image-20221009130550734.png" alt="image-20221009130550734"></p>
-<p>在状态内部涉及到变量</p>
-<h2 id="约束：变量之间的约束关系"><a href="#约束：变量之间的约束关系" class="headerlink" title="约束：变量之间的约束关系"></a>约束：变量之间的约束关系</h2><p>CSP实际上可以看做一种表征语言，将问题进行形式化（数理逻辑）。通用高效</p>
-<h2 id="实例：地图染色问题"><a href="#实例：地图染色问题" class="headerlink" title="实例：地图染色问题"></a>实例：地图染色问题</h2><p><img src="/../images/posts/image-20221009131008724.png" alt="image-20221009131008724"></p>
-<p>相鄰區域改成不同顏色。也可以转换为邻接图问题。</p>
-<h2 id="实例：数独问题"><a href="#实例：数独问题" class="headerlink" title="实例：数独问题"></a>实例：数独问题</h2><p>从高约束变量逐渐确定到低约束变量。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/11/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20CSP/" data-id="cl93g2ig2000118ulbvck77e3" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/10/11/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-10-11T00:06:50.480Z" itemprop="datePublished">2022-10-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/10/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/11/hello-world/" data-id="cl93g2ifp000018ul79lp8v5a" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-神经网络与NLP" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/10/08/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8ENLP/" class="article-date">
-  <time class="dt-published" datetime="2022-10-08T00:07:34.000Z" itemprop="datePublished">2022-10-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/10/08/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8ENLP/">神经网络与NLP</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="/../images/posts/image-20221008081554469.png" alt="image-20221008081554469"></p>
-<p><img src="/../images/posts/image-20221008082301034.png" alt="image-20221008082301034"></p>
-<p><img src="/../images/posts/image-20221008082703589.png" alt="image-20221008082703589"></p>
-<p>递归神经网络：</p>
-<p><img src="/../images/posts/image-20221008085738151.png" alt="image-20221008085738151"></p>
-<p><img src="/../images/posts/image-20221008091656987.png" alt="image-20221008091656987"></p>
-<p><img src="/../images/posts/image-20221008092141455.png" alt="image-20221008092141455"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/08/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8ENLP/" data-id="cl93g2ign000918ul5aoj1hr1" data-title="神经网络与NLP" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-人工智能-Project-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/10/07/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-Project-1/" class="article-date">
-  <time class="dt-published" datetime="2022-10-07T06:03:20.000Z" itemprop="datePublished">2022-10-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/10/07/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-Project-1/">人工智能 Project 1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="人工智能-Project1"><a href="#人工智能-Project1" class="headerlink" title="人工智能   Project1"></a>人工智能   Project1</h1><p>[TOC]</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>多序列比对（MSA）：将多个序列放在一起进行对齐比对，寻找序列转换的途径，并按照给定的转换加权值寻找最优的转换方法的算法。常用于生物学领域例如RNA等。</p>
-<p><img src="/../images/posts/image-20221004115202304-1665146683440.png" alt="image-20221004115202304"></p>
-<p>上图中为项目说明文档中给出的序列比对图，包含了元素改变，空位这两种模式。在进行统一比对时以满足每个序列都已对齐为标准。本项目对加权过程进行了简化：</p>
-<p><img src="/../images/posts/image-20221004115517703-1665146683441.png" alt="image-20221004115517703"></p>
-<p>当前序列的这一比对节点与被比对序列的比对节点只需要关注以上三种情况，相同的加权为零，不同的加权为4，对上空位加权为3。此外有特殊规则，在空位对上空位时按照相同匹配处理。</p>
-<p><img src="/../images/posts/image-20221004120633030-1665146683441.png" alt="image-20221004120633030">                                                                                                                                                                                                                                                                                                                                                             </p>
-<h2 id="需要解决的问题"><a href="#需要解决的问题" class="headerlink" title="需要解决的问题"></a>需要解决的问题</h2><p>尽管从结果上看，对齐与权值计算是一个分开的过程，但是要找到最优化的权值，这两个过程应该是一体的，动态调整序列进行状态变动以求寻找到的最优化的权。因此引出了本项目。项目文档中要求我们用三种方式处理多序列比对问题：动态规划，A*算法，基因算法。其中前两个要求找出最优解，基因算法能够找出最优解或者次优解即可。给出的两个TXT文件中query.txt是需要寻找最好cost的序列，其中双序列匹配给出了五条序列进行实验。三序列比对给出了两条序列。database.txt是可供选择的序列集，是用来进行比对的对象。在进行三序列比对时是从数据中寻找两条序列，让最终结果cost最低，重复两次实验。</p>
-<h3 id="有关这三种算法："><a href="#有关这三种算法：" class="headerlink" title="有关这三种算法："></a>有关这三种算法：</h3><ul>
-<li>动态规划：将原始问题划分成若干个范围较小的子问题进行问题处理的算法，适用于子问题之间并不相互独立的情况。</li>
-<li>A*算法：经典描述为在静态路网中寻找代价最小路径的方法。他把最初始的状态作为起点，几种状态变化作为每一步的行动（各种行动按照加权拥有不同的权值），要到达的目标作为终点。通过一个启发函数比较各种可能路径的值并最终选定一个最优化的解。</li>
-<li>基因算法：通过模拟基因遗传的过程，再加上人为的选择，使得问题的拟似解越来越接近问题的真实解的算法。上一代的结果在经过修剪后会成为产生下一代所用的数据。而判断每一代生存价值的就是筛选所用的标准，将每一代的数据进行解码带入函数得到的就是筛选所用的“表现型”。</li>
-</ul>
-<h2 id="正式项目"><a href="#正式项目" class="headerlink" title="正式项目"></a>正式项目</h2><h3 id="基于动态规划的多序列比对"><a href="#基于动态规划的多序列比对" class="headerlink" title="基于动态规划的多序列比对"></a>基于动态规划的多序列比对</h3><h4 id="Needleman-Wunsch算法"><a href="#Needleman-Wunsch算法" class="headerlink" title="Needleman-Wunsch算法"></a>Needleman-Wunsch算法</h4><p>整个项目的重点就在于对齐函数，在这个过程中用到了动态规划，通过不断回溯调整打分矩阵的方式找到了最优化的对齐方式，实际上采用的是多序列比对最老的Needleman-Wunsch算法（这里与下面的图片主要引用了<a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_41860619/article/details/118069970">(86条消息) 生物信息学（1）——双序列比对之Needleman-Wunsch(NW)算法详解及C++实现_大青儿的博客-CSDN博客_双序列比对动态规划算法</a>），相比之后出现的各种改进方法，这种算法依旧偏向比较暴力的方式。</p>
-<p><img src="/../images/posts/image-20221005142438962-1665146683441.png" alt="image-20221005142438962"></p>
-<p><img src="/../images/posts/image-20221005142648310-1665146683442.png" alt="image-20221005142648310"></p>
-<p>在进行两个序列的比较时按规定的打分规则建立打分矩阵，在本题中由于打分的规则实际上相当简化，矩阵的生成过程实际上也进行了很大的转变。</p>
-<p>之后从矩阵的最右下角开始向上回溯，添加空格的方式代表错位选择，不断选取最优路线直到回到开头为止，在这个过程中得出了路线就是最优路线，三序列比较也与这个问题类似。</p>
-<h3 id="基于A-算法的多序列比对"><a href="#基于A-算法的多序列比对" class="headerlink" title="基于A*算法的多序列比对"></a>基于A*算法的多序列比对</h3><p>由于本题中每一个状态所能进行的行动实际上有限，A*算法的代码量也在可以接受的范围内。在完成这个项目时我对自己所写的是否是Astar算法产生了很大的迷惑，我理解的Astar算法是这样的：</p>
-<ul>
-<li><p>创建开启列表并填充起始状态。</p>
-</li>
-<li><p>重复以下流程：</p>
-<ul>
-<li>寻找当前代价最低点作为当前格</li>
-<li>将其切换至关闭列表</li>
-<li>在周围的可选状态中进行分类 已经关闭的忽略，未关闭的加入开启列表，已经在的进行比较判断是否要保留当前格。</li>
-</ul>
-</li>
-<li><p>若目标格出现在开启列表中，则已经找到路径，可输出。</p>
-<p>而在我还参考了BLAST算法的思路，也是启发式算法，描述上也与Astar的描述相近。但是它是从序列中的某些片段逐渐逼近最终得出的解。比A*还要复杂一些，我只是参照了一个思路，并未实现BLAST算法，Expand是在这个过程中非常重要的步骤。</p>
-<h6 id="BLAST算法（Basic-Local-Alignment-Search-Tool）"><a href="#BLAST算法（Basic-Local-Alignment-Search-Tool）" class="headerlink" title="BLAST算法（Basic Local Alignment Search Tool）"></a>BLAST算法（Basic Local Alignment Search Tool）</h6><h5 id="86条消息-生物信息学（3）——双序列比对之BLAST算法简介-大青儿的博客-CSDN博客-双序列比对算法"><a href="#86条消息-生物信息学（3）——双序列比对之BLAST算法简介-大青儿的博客-CSDN博客-双序列比对算法" class="headerlink" title="(86条消息) 生物信息学（3）——双序列比对之BLAST算法简介_大青儿的博客-CSDN博客_双序列比对算法"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_41860619/article/details/118071607">(86条消息) 生物信息学（3）——双序列比对之BLAST算法简介_大青儿的博客-CSDN博客_双序列比对算法</a></h5><ul>
-<li><p>Seeding：将需要比对的片段拆分成多个Seed word。</p>
-</li>
-<li><p>Matching：找到他们在被比对序列中当中的位置。</p>
-</li>
-<li><p>Expand：参照上面的NW算法将序列进行拓张，获取到的最长序列就是所需的序列。</p>
-<p><img src="/../images/posts/image-20221005150257704-1665146683442.png" alt="image-20221005150257704"></p>
-</li>
-</ul>
-<p>这个算法是相当高效的，因为它避免了将整个矩阵全部列出的问题，但是我的代码并没有如此高效。</p>
-<p>另外正如文中所言，这个是算法实际上只是高效的双序列比对算法，在多序列比对上并不高效，因此三序列比对的做法非常臃肿。在这方面正确的做法应该是CLUSTAL算法。</p>
-</li>
-</ul>
-<h3 id="基于基因算法的多序列比对"><a href="#基于基因算法的多序列比对" class="headerlink" title="基于基因算法的多序列比对"></a>基于基因算法的多序列比对</h3><p>这个项目在当时上课听的时候我一直觉得非常合理，因为问题也跟基因有关，实际自己上手做的时候百思不得其解，基因是什么，表现型是什么，每一步的突变又是什么？尽管在问题求解与实践课上做过运用基因算法的方程求解，但是在那个问题中解和遗传因子都比较明确。这个问题很困扰我。</p>
-<p>在本文问题中我们最终想要得到的数值结果是最好的cost，最终留下的个体中包含了能够进行较优比对的序列。那么每一步要进行的重组是什么呢？在这个过程中是否应当包含突变？这里的突变又是什么意思？这个问题着实给我迷惑住了。后来才想明白基因算法也是只用于寻找序列对齐比较的过程中，感觉其实不是很高效，跑起来应该会很费时间。</p>
-<p>这样就能写出基因算法的相关部件了：</p>
-<ul>
-<li><p>目标：某对序列比对的较优解。</p>
-</li>
-<li><p>个体：某种对齐方式。</p>
-</li>
-<li><p>表现型：这种对齐方式对应的cost。</p>
-</li>
-<li><p>杂交：将个体的对齐方式进行混杂。</p>
-</li>
-<li><p>选择：按照cost进行筛选。</p>
-<p>对齐方式进行不断筛选后得到的就是这一对序列比对的较优解，我认为依旧是更适用于双序列比较的方式。</p>
-</li>
-</ul>
-<h3 id="有关三序列比对"><a href="#有关三序列比对" class="headerlink" title="有关三序列比对"></a>有关三序列比对</h3><p>三序列比对我认为我做的很不好，基本上只是把第三条序列塞到了之前的对齐比较里面，思路依旧是按照双序列比对进行操作，没有做出实质性的改变，在实际操作中对整个数据库，运行时间非常长，甚至达到了小时级别。</p>
-<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><h3 id="基于动态规划"><a href="#基于动态规划" class="headerlink" title="基于动态规划"></a>基于动态规划</h3><h4 id="双序列比对"><a href="#双序列比对" class="headerlink" title="双序列比对"></a>双序列比对</h4><p>运行时间为0.38秒。</p>
-<p><img src="/../images/posts/image-20221007170320258.png" alt="image-20221007170320258"></p>
-<h4 id="多序列比对"><a href="#多序列比对" class="headerlink" title="多序列比对"></a>多序列比对</h4><p>运行时间为1259.25s</p>
-<p><img src="/../images/posts/image-20221007175657593.png" alt="image-20221007175657593"></p>
-<h3 id="基于A-算法"><a href="#基于A-算法" class="headerlink" title="基于A*算法"></a>基于A*算法</h3><h4 id="双序列比对-1"><a href="#双序列比对-1" class="headerlink" title="双序列比对"></a>双序列比对</h4><p><img src="/../images/posts/image-20221006220220941-1665146683444.png" alt="image-20221006220220941"></p>
-<p><img src="/../images/posts/image-20221007170344519.png" alt="image-20221007170344519"></p>
-<h4 id="多序列比对-1"><a href="#多序列比对-1" class="headerlink" title="多序列比对"></a>多序列比对</h4><p><img src="/../images/posts/A3-1665122314270-1665146683444.png" alt="A3"></p>
-<p><img src="/../images/posts/image-20221007175715337.png" alt="image-20221007175715337"></p>
-<h3 id="基于基因算法"><a href="#基于基因算法" class="headerlink" title="基于基因算法"></a>基于基因算法</h3><p>基因算法的成果并不算好，运行了很长时间却得不到优秀的结果。</p>
-<h4 id="双序列比对-2"><a href="#双序列比对-2" class="headerlink" title="双序列比对"></a>双序列比对</h4><p><img src="/../images/posts/image-20221006222923967-1665146683445.png" alt="image-20221006222923967"></p>
-<p>共迭代150次，杂交概率为0.9，突变为0.01</p>
-<p><img src="/../images/posts/image-20221007180324303.png" alt="image-20221007180324303"></p>
-<h4 id="多序列比对-2"><a href="#多序列比对-2" class="headerlink" title="多序列比对"></a>多序列比对</h4><p><img src="/../images/posts/GA-1665146683452.png" alt="GA"></p>
-<p>按照双序列比对的方式，共迭代150次，杂交概率为0.9，突变为0.01,结果在相当程度上偏离了正确解。</p>
-<p><img src="/../images/posts/image-20221007194650747.png" alt="image-20221007194650747"></p>
-<p>结果并不像双序列对齐那么好，分析问题来源可能是在进行三序列对齐时采用了简单加和的方式，才造成这种情况。</p>
-<h3 id="时间复杂性分析"><a href="#时间复杂性分析" class="headerlink" title="时间复杂性分析"></a>时间复杂性分析</h3><p>本体中所使用的三种方式都需要对整个数据库进行遍历，因此在双序列比对时一定会进行M*N次最优效果求解（M为Query序列数，N为数据库序列数），在进行三序列比对时一定会进行$\dfrac {m\times(n-1)\times n}{2} $次最优秀效果求解，这对于三种算法都一样。而对于求解最优秀算法的时间复杂性：</p>
-<h4 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h4><p>动态规划在已知路径图的基础上进行拓展,会对整个表格进行填充，因此对于双序列就是$O(n^{2})$,对于三序列就是$O(n^{3})$</p>
-<h4 id="Astar算法"><a href="#Astar算法" class="headerlink" title="Astar算法"></a>Astar算法</h4><p>启发函数复杂度为$O(1)$。在最差的情况下所有的节点都被展开了一次，序列长度为n的时候有$n^{2}$个节点被展开。</p>
-<p>在最好的情况下在$O(n)$个节点后到达目标节点。</p>
-<p>所以在最差情况的时间复杂度为$O(n^{2}\log n)$ ，最好情况下为 $O(n\log n)$。</p>
-<p>同理，再三序列比对的情况下最差时间复杂度为$O(n^{3}\log n)$，最好为$O(n\log n)$</p>
-<h4 id="基因算法"><a href="#基因算法" class="headerlink" title="基因算法"></a>基因算法</h4><p>设计种群规模为S ，进化代数为M ，序列长度为L ，序列数为N 。</p>
-<p>对于每一个个体，我们首先要进行空位的嵌入，然后再成对计算匹配代价。序列展开的复杂度为$O(NL<br>)$ 。</p>
-<p>共有N个序列，所以这一步骤的复杂度为$O(N^{2}L)$。</p>
-<p>之后会对全部的个体进行加权选择并得出下一代，这过程两次种群规模进行了嵌套，所以是$O(S^{2})$</p>
-<p>其时间复杂性最终为$O(MSN^{2}L + MS^{2})$</p>
-<h2 id="实验体会"><a href="#实验体会" class="headerlink" title="实验体会"></a>实验体会</h2><p>本实验主要的改动点在序列的对齐算法，其余部分都是读取处理比较计算出的cost值。</p>
-<p>三序列比对的时间比较长。</p>
-<p>此外还稍微阅读了一下CLUSTAL算法的内容。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/07/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-Project-1/" data-id="cl93g2igc000418ulg8bv3c2a" data-title="人工智能 Project 1" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -1237,7 +1349,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
     </div>
   </div>
 
@@ -1250,23 +1362,23 @@
       <ul>
         
           <li>
-            <a href="/2022/10/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-10%E6%9C%8827%E6%97%A5/">人工智能 10月27日</a>
+            <a href="/2022/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/">计算机网络复习</a>
           </li>
         
           <li>
-            <a href="/2022/10/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-10%E6%9C%8826%E6%97%A5/">计算机图形学 10月26日</a>
+            <a href="/2022/11/08/%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%BB%BB%E5%8A%A1/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2022/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%B8%8D%E7%9F%A5%E9%81%93/">计算机网络 不知道</a>
+            <a href="/2022/11/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2022/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E5%A4%8D%E4%B9%A0/">计算机图形学 复习</a>
+            <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/">信息抽取 观点抽取</a>
           </li>
         
           <li>
-            <a href="/2022/10/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E7%AC%AC%E4%BA%94%E5%91%A8/">计算机图形学 第五周</a>
+            <a href="/2022/11/08/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96-%E8%A7%82%E7%82%B9%E6%8A%BD%E5%8F%96/">信息抽取 关系抽取</a>
           </li>
         
       </ul>
